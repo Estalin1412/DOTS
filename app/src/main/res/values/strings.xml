@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">DotsApp</string>
+    <!-- String para Login-->
+    <string name="User_login"> Usuario</string>
+    <string name="Password_login">Contraseña</string>
+    <string name="New_password">Olvidé mi contraseña</string>
+    <string name="New_Accound">Crear cuenta</string>
+    <string name="Init_session">INICIAR SESIÓN</string>
+    <string name="Other_init_accound">Otras formas de iniciar sesión</string>
+    <!-- String para Registrar-->
+    <string name="Crear_account_dots_app">Crear cuenta de DotsApp</string>
+    <string name="Insert_password">Ingresar su contraseña.</string>
+    <string name="Insert_email_address">Ingresar dirección de email.</string>
+    <string name="Confirm_password">Confirmar contraseña.</string>
+    <string name="Ive_read_privacy_policy">He leído y acepto el acuerdo de usuario y las política de privacidad de DotsApp</string>
+    <string name="Next">SIGUIENTE</string>
+</resources>
