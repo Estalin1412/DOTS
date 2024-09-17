@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PantLogin.LoginActivity"
+    android:background="@color/black"
+    android:padding="16dp"
+    android:fillViewport="true"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Logo en la parte superior media -->
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/batch_path1_dotslogo"
+            android:tint="@color/white"
+            android:scaleType="fitXY"
+            android:contentDescription="Logo de la app"
+            />
+
+        <!-- EditText para ID o Correo -->
+        <EditText
+            android:id="@+id/editTextInsertEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:hint="Usuario"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:inputType="textEmailAddress"
+            android:backgroundTint="@color/white"
+            android:padding="10dp"
+            android:paddingEnd="12dp"
+            android:textSize="16sp" />
+
+        <!-- EditText para Contraseña -->
+        <EditText
+            android:id="@+id/editTextInsertPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:hint="Contraseña"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:inputType="textPassword"
+            android:backgroundTint="@color/white"
+            android:padding="12dp"
+            android:textSize="16sp" />
+
+        <!-- Texto "Olvidé mi contraseña" -->
+        <TextView
+            android:id="@+id/forgotPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="8dp"
+            android:text="Olvidé la contraseña"
+            android:textColor="@color/color_selector"
+            android:textSize="14sp"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginEnd="32dp"
+            />
+
+        <!-- Botón de "Iniciar sesión" -->
+        <Button
+            android:id="@+id/buttonLogin"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="@color/colorPrimario01"
+            android:text="Iniciar sesión"
+            android:textColor="@color/white"
+            android:padding="12dp"
+            android:textSize="16sp" />
+
+        <!-- Texto "Crear cuenta" y "Iniciar sesión con SMS" -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/createAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Crear cuenta"
+                android:textColor="@color/color_selector"
+                android:textSize="14sp"
+                android:layout_marginEnd="16dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_marginStart="32dp"
+                />
+
+        </LinearLayout>
+
+        <!-- Acuerdo de Usuario y Privacidad -->
+        <TextView
+            android:id="@+id/userAgreement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="He leído y acepto el Acuerdo de Usuario y la Política de Privacidad"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <!-- Otras formas de iniciar sesión -->
+        <TextView
+            android:id="@+id/otherLoginOptions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Otras formas de iniciar sesión"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:layout_gravity="center_horizontal" />
+
+        <!-- Redes sociales (Facebook, Google, Apple) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="16dp">
+
+            <!-- Botón de Facebook
+            <ImageButton
+                android:id="@+id/buttonFacebook"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_margin="8dp"
+                android:src="@drawable/ic_launcher_foreground"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Iniciar sesión con Facebook" />
+              -->
+            <!-- Botón de Google -->
+            <ImageButton
+                android:id="@+id/buttonGoogle"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="8dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/batch_g211_gmaillogo00"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Iniciar sesión con Google" />
+
+            <!-- Botón de Apple
+            <ImageButton
+                android:id="@+id/buttonApple"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_margin="8dp"
+                android:src="@drawable/ic_launcher_foreground"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Iniciar sesión con Apple" />
+            -->
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
