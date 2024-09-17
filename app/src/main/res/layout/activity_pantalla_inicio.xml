@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PantLogin.LoginActivity"
+    android:background="@color/colorBlack"
+    >
+    <!-- Botón de menú hamburguesa (tres líneas) en la parte superior derecha -->
+    <ImageButton
+        android:id="@+id/menuButton"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:scaleType="fitXY"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+
+        android:src="@drawable/batch_path1_plusimagen"
+        android:tint="@color/colorGris"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Menu" />
+
+    <!-- Botón de agregar (símbolo de más) justo encima del menú -->
+    <ImageButton
+        android:id="@+id/addButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="16dp"
+        android:layout_below="@+id/menuButton"
+        android:src="@drawable/ic_launcher_foreground"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Agregar" />
+
+    <!-- Texto "Hogar Inteligente" -->
+    <TextView
+        android:id="@+id/homeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dispositivos"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="16dp" />
+
+    <!-- Imagen central (Placeholder para dispositivos no encontrados) -->
+    <ImageView
+        android:id="@+id/noDevicesImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/ic_launcher_foreground"
+        android:contentDescription="No hay dispositivos" />
+
+    <!-- Texto "Todavía no hay dispositivos" debajo de la imagen central -->
+    <TextView
+        android:id="@+id/noDevicesText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/noDevicesImage"
+        android:layout_centerHorizontal="true"
+        android:text="Todavía no hay dispositivos"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <!-- Botón de "Editar" -->
+    <Button
+        android:id="@+id/editButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Editar"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/noDevicesText"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/colorGris" />
+
+    <!-- Barra inferior con tres botones -->
+    <LinearLayout
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:background="@color/black">
+
+        <!-- Botón "Mi Home" -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+
+            <ImageButton
+                android:id="@+id/btnHome"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_launcher_foreground"
+                android:contentDescription="Mi Home"
+                android:background="?attr/selectableItemBackgroundBorderless" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mi dispositivo"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <!-- Botón "Inteligente" -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+
+            <ImageButton
+                android:id="@+id/btnIntelligent"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_launcher_foreground"
+                android:contentDescription="Inteligente"
+                android:background="?attr/selectableItemBackgroundBorderless" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mis datos"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <!-- Botón "Perfil" -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+
+            <ImageButton
+                android:id="@+id/btnProfile"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_launcher_foreground"
+                android:contentDescription="Perfil"
+                android:background="?attr/selectableItemBackgroundBorderless" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Perfil"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</RelativeLayout>
