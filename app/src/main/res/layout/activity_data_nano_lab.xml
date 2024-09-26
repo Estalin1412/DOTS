@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/black"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PantNanoLab.DataNanoLabActivity">
+
+        <!-- Sección superior para gráficos o detalles -->
+        <FrameLayout
+            android:id="@+id/graphContainer"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_margin="16dp"
+            android:background="@color/colorGrisOscuro"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_centerHorizontal="true" />
+
+        <!-- RecyclerView para mostrar los datos -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewDatos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/graphContainer"
+            android:layout_marginBottom="16dp"
+            android:clipToPadding="false"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:scrollbars="vertical" />
+
+    </RelativeLayout>

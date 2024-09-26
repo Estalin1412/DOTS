@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@color/black"
+    android:padding="16dp"
+    tools:context=".PantPrincipal.usuarioActivity">
+
+    <!-- Sección superior con el número de dispositivo y la flecha -->
+    <LinearLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="8dp"
+        >
+
+        <!-- Número del dispositivo -->
+        <TextView
+            android:id="@+id/deviceNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6754921180"
+            android:textSize="22sp"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <!-- Flecha clickeable que redirige a otra pantalla -->
+        <ImageView
+            android:id="@+id/arrowIcon"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@drawable/botonsiguientederecha"
+
+            android:layout_marginStart="8dp"
+            android:scaleType="fitXY"
+            android:contentDescription="Flecha"
+            android:clickable="true"
+            android:focusable="true" />
+    </LinearLayout>
+
+    <!-- Descripción debajo del número del dispositivo -->
+    <TextView
+        android:id="@+id/deviceDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gestionar dispositivos"
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        android:layout_below="@id/headerLayout"
+        android:layout_marginTop="4dp"
+        android:clickable="true"
+        android:focusable="true" />
+
+    <!-- Imagen clickeable a la derecha -->
+    <ImageView
+        android:id="@+id/profileIcon"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:src="@drawable/batch_path1_usuario"
+        android:contentDescription="Imagen de perfil"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/headerLayout"
+        android:clickable="true"
+        android:focusable="true" />
+
+    <!-- Botones principales debajo de todo -->
+    <LinearLayout
+        android:id="@+id/mainButtonsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/deviceDescription"
+        android:layout_marginTop="32dp">
+
+        <!-- Primer botón: Hogar -->
+        <LinearLayout
+            android:id="@+id/homeButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/rounded_button_background"
+            android:gravity="center_vertical"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:id="@+id/homeIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/batch_path1_ajustes"
+                android:contentDescription="Icono de hogar" />
+
+            <TextView
+                android:id="@+id/homeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hogar de 6754921180"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:layout_marginStart="16dp" />
+        </LinearLayout>
+
+        <!-- Segundo botón: Asistente de voz -->
+        <LinearLayout
+            android:id="@+id/voiceAssistantButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/rounded_button_background"
+            android:gravity="center_vertical"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:id="@+id/voiceAssistantIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/batch_path1_ajustes"
+                android:contentDescription="Icono de asistente de voz" />
+
+            <TextView
+                android:id="@+id/voiceAssistantText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Asistente de voz"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:layout_marginStart="16dp" />
+        </LinearLayout>
+
+        <!-- Tercer botón: Estaciones y puertas de enlace -->
+        <LinearLayout
+            android:id="@+id/stationsButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/rounded_button_background"
+            android:gravity="center_vertical"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:id="@+id/stationsIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/batch_path1_ajustes"
+                android:contentDescription="Icono de estaciones" />
+
+            <TextView
+                android:id="@+id/stationsText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Estaciones centrales y puertas de enlace"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:layout_marginStart="16dp" />
+        </LinearLayout>
+
+        <!-- Cuarto botón: Ajustes adicionales -->
+        <LinearLayout
+            android:id="@+id/additionalSettingsButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/rounded_button_background"
+            android:gravity="center_vertical"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:id="@+id/settingsIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/batch_path1_ajustes"
+                android:contentDescription="Icono de ajustes adicionales" />
+
+            <TextView
+                android:id="@+id/settingsText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ajustes adicionales"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:layout_marginStart="16dp" />
+        </LinearLayout>
+
+        <!-- Quinto botón: Ayuda y comentarios -->
+        <LinearLayout
+            android:id="@+id/helpButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/rounded_button_background"
+            android:gravity="center_vertical"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:id="@+id/helpIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/batch_path1_ajustes"
+                android:contentDescription="Icono de ayuda y comentarios" />
+
+            <TextView
+                android:id="@+id/helpText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ayuda y comentarios"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:layout_marginStart="16dp" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

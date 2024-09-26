@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item
+    android:id="@+id/menu_Nanolab"
+    android:title="NanoLab" />
+<item
+    android:id="@+id/menu_Estacion"
+    android:title="Estación metereológica" />
+<item
+    android:id="@+id/menu_Hyperlink"
+    android:title="Hyperlink" />
+    <item
+        android:id="@+id/menu_otros"
+        android:title="Otros" />
+</menu>

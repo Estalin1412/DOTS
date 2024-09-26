@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    tools:context=".PantNanoLab.NanoLabMainActivity"
+    android:background="@color/black"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="32dp"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="8dp">
+<!-- Sección superior con el número de dispositivo y la flecha -->
+<LinearLayout
+    android:id="@+id/tvDispositivo"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:layout_marginTop="72dp"
+    android:layout_marginBottom="8dp"
+    >
+    <!-- Número del dispositivo -->
+    <TextView
+        android:id="@+id/deviceNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="6754921180"
+        android:textSize="22sp"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <!-- Flecha clickeable que redirige a otra pantalla -->
+    <ImageView
+        android:id="@+id/arrowIcon"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:src="@drawable/botonsiguientederecha"
+
+        android:layout_marginStart="8dp"
+        android:scaleType="fitXY"
+        android:contentDescription="Flecha"
+        android:clickable="true"
+        android:focusable="true" />
+</LinearLayout>
+
+<!-- Descripción debajo del número del dispositivo -->
+<LinearLayout
+    android:id="@+id/linearElegirDispositivo"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/tvDispositivo"
+    >
+    <TextView
+        android:id="@+id/deviceDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gestionar dispositivos"
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        android:layout_marginTop="4dp"
+        android:clickable="true"
+        android:focusable="true" />
+    <ImageView
+        android:id="@+id/iconArrowRight"
+        android:layout_width="14dp"
+        android:layout_height="22dp"
+        android:src="@drawable/botonsiguientederecha"
+
+        android:layout_marginStart="8dp"
+        android:scaleType="fitXY"
+        android:contentDescription="Flecha"
+        android:clickable="true"
+        android:focusable="true" />
+</LinearLayout>
+
+<!-- Botones principales debajo de todo -->
+    <!-- RecyclerView para agregar botones dinámicamente -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearElegirDispositivo"
+        android:layout_marginTop="16dp" />
+</RelativeLayout>
