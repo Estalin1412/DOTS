@@ -7,7 +7,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.dots.R
 
-class DatosNanolabAdapter(private val listaDatos: List<Dato>, private val onClick: (Dato) -> Unit) :
+class DatosNanolabAdapter(private val listaDatos: List<DatoNanolab>, private val onClick: (DatoNanolab) -> Unit) :
     RecyclerView.Adapter<DatosNanolabAdapter.DatoViewHolder>() {
     private var selectedItemPosition: Int = RecyclerView.NO_POSITION
 
@@ -45,7 +45,7 @@ class DatosNanolabAdapter(private val listaDatos: List<Dato>, private val onClic
         private val textCantidad: TextView = itemView.findViewById(R.id.textCantidadDato)
         private val textUnidad: TextView = itemView.findViewById(R.id.textUnidadDato)
 
-        fun bind(dato: Dato, onClick: (Dato) -> Unit) {
+        fun bind(dato: DatoNanolab, onClick: (DatoNanolab) -> Unit) {
             textNombre.text = dato.nombre
             textCantidad.text = dato.cantidad
             textUnidad.text = dato.unidad

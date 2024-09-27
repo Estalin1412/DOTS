@@ -12,7 +12,7 @@ import com.example.dots.PantPrincipal.PantallaInicio
 import com.example.dots.R
 
 class LoginActivity : AppCompatActivity() {
-
+    /*OBJETOS VISUALES(botones, textos clickleables, caja de box)--------------------------------------*/
     lateinit var btnAccederSession: Button
     lateinit var tvCreatAcount: TextView
 
@@ -20,12 +20,8 @@ class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-
-
-
-
-
         setContentView(R.layout.activity_login)
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -35,6 +31,9 @@ class LoginActivity : AppCompatActivity() {
         InitListeners();
 
     }
+
+    /*FUNCI0NES INDEPENDIENTES(funciones que se deben ejecutar si o si)------------------------*/
+    //Funcion para sincronizar variables con su respectivo objeto visual
     public  fun Init(){
         btnAccederSession = findViewById(R.id.buttonLogin)
         tvCreatAcount = findViewById(R.id.createAccount)

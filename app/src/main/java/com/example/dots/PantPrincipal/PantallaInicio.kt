@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.PopupMenu
@@ -17,9 +18,10 @@ import com.example.dots.PantNanoLab.NanoLabMainActivity
 import com.example.dots.R
 
 class PantallaInicio : AppCompatActivity() {
-
-    lateinit var imagenButtonProgramas: ImageButton
-    lateinit var imbtnAgregarPrograma: ImageButton
+    /*-------------------------Definicion de objetos visuales---------------------*/
+    //Definicion de variable para botones en de activity_pantalla_inicio.xml
+    lateinit var imbtnOpcionUsuario: ImageButton
+    lateinit var imbtnOpcionesDispositivo: ImageButton
 
 
 
@@ -31,28 +33,26 @@ class PantallaInicio : AppCompatActivity() {
         setContentView(R.layout.activity_pantalla_inicio)
 
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
-
         InitComponentes();
         InitListenersComponents();
 
 
 
     }
+    /*---------Funciones Independientes(Se llama se deben llamar si o si)------------------*/
+    //Funcion para asociar varibles con dispositivos
     public fun InitComponentes(){
-        imagenButtonProgramas = findViewById(R.id.menuButton)
-        imbtnAgregarPrograma = findViewById(R.id.btnAgregarNanoLab)
+        imbtnOpcionUsuario = findViewById(R.id.imbtnOpcionesDeUsuario)
+        imbtnOpcionesDispositivo = findViewById(R.id.imbtnOpcionesDispositivos)
     }
+    //Funcion
     public fun InitListenersComponents(){
-        imbtnAgregarPrograma.setOnClickListener{view -> showPopupMenu(view)}
+        //Para mostrar opciones flotantes
+        imbtnOpcionesDispositivo.setOnClickListener{view -> showPopupMenu(view)}
 
     }
 
-
+    /*------FUNCIONES DEPENDIENTES SE LLAMAN EN LAS FUNCIONES INDEPENDIENTES--------*/
     private fun showPopupMenu(view: View) {
         // Crea el PopupMenu
         // Mostrar el PopupMenu
@@ -64,17 +64,20 @@ class PantallaInicio : AppCompatActivity() {
         popupMenu.setOnMenuItemClickListener {
             item: MenuItem ->
             when (item.itemId) {
+                //Elegir nano lab
                 R.id.menu_Nanolab ->{
+                    //Para ingresar a la pantalla de NanoLabMainActivity-----------
                     val intent = Intent(this , NanoLabMainActivity::class.java)
                     startActivity(intent)
+                    //----------------------------------------------------------
                     true
                 }
+                //ELEGIR estacion
                 R.id.menu_Estacion -> {
-                    Toast.makeText(this, "Escanear", Toast.LENGTH_SHORT).show()
                     true
                 }
-                R.id.menu_Estacion -> {
-                    Toast.makeText(this, "Crear escena inteligente", Toast.LENGTH_SHORT).show()
+                //ELEGIR HIPERLINK
+                R.id.menu_Hyperlink -> {
                     true
                 }
                 else -> false
