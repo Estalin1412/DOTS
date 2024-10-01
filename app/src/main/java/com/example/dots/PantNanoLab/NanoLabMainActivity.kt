@@ -2,9 +2,11 @@ package com.example.dots.PantNanoLab
 
 import ButtonAdapter
 import ButtonData
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.dots.R
@@ -19,6 +21,7 @@ class NanoLabMainActivity : AppCompatActivity() {
         ButtonData(R.drawable.batch_path1_ajustes, "Nano 1"),
         ButtonData(R.drawable.batch_path1_ajustes, "Nano 2")
     )
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -31,7 +34,10 @@ class NanoLabMainActivity : AppCompatActivity() {
     /*----------------FUNCIONES INDEPENDIENTES(funciones que se ejecutan si o si)---------*/
     public fun InitComponents(){
         recyclerView = findViewById(R.id.recyclerViewButtons)
-        buttonsAdapter = ButtonAdapter(buttonList)
+        //Para clicker en el adaptador
+        buttonsAdapter = ButtonAdapter(buttonList){
+            buttonData ->  onButtonClicked(buttonData)
+        }
 
     }
     public fun InitListeners(){
@@ -41,6 +47,10 @@ class NanoLabMainActivity : AppCompatActivity() {
     }
     /*FUNCIONES DEPENDIENTES, SE EJECUTAN en las funciones dependiente---------------------*/
 
-
+    //Funcion para manejaer el click en los botones
+    private fun onButtonClicked(buttonData: ButtonData){
+        val intent = Intent(this, DataNanoLabActivity::class.java)
+        startActivity(intent)
+    }
 
 }

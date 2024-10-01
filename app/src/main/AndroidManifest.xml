@@ -18,17 +18,17 @@
         android:theme="@style/Theme.DOTS"
         tools:targetApi="31">
         <activity
-            android:name=".PantNanoLab.ConectarMQTTActivity"
-            android:exported="false" >
-        </activity>
+            android:name=".PantPrincipal.ConfigurationUsuarioActivity"
+            android:exported="false" />
         <activity
             android:name=".PantNanoLab.DataNanoLabActivity"
-            android:exported="false">
-
-        </activity>
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            ></activity>
         <activity
             android:name=".PantNanoLab.NanoLabMainActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         <activity
             android:name=".PantPrincipal.usuarioActivity"
             android:exported="false" />
@@ -37,7 +37,8 @@
             android:exported="false" />
         <activity
             android:name=".PantLogin.ForgotPasswordActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".PantLogin.LoginActivity"
             android:exported="true">

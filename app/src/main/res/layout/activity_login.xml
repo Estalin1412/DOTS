@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -10,6 +10,7 @@
     android:padding="16dp"
     android:fillViewport="true"
     android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="16dp"
     >
 
     <LinearLayout
@@ -17,7 +18,6 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:gravity="center_horizontal">
-
         <!-- Logo en la parte superior media -->
         <ImageView
             android:id="@+id/logo"
@@ -153,17 +153,6 @@
             android:gravity="center"
             android:layout_marginTop="16dp">
 
-            <!-- Botón de Facebook
-            <ImageButton
-                android:id="@+id/buttonFacebook"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_margin="8dp"
-                android:src="@drawable/ic_launcher_foreground"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:contentDescription="Iniciar sesión con Facebook" />
-              -->
-            <!-- Botón de Google -->
             <ImageButton
                 android:id="@+id/buttonGoogle"
                 android:layout_width="50dp"
@@ -174,17 +163,7 @@
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:contentDescription="Iniciar sesión con Google" />
 
-            <!-- Botón de Apple
-            <ImageButton
-                android:id="@+id/buttonApple"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_margin="8dp"
-                android:src="@drawable/ic_launcher_foreground"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:contentDescription="Iniciar sesión con Apple" />
-            -->
         </LinearLayout>
 
     </LinearLayout>
-</ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

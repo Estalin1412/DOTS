@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
     <!-- Definir el color de fondo del botón -->
-    <solid android:color="@color/colorMarineBlue" />
+    <solid android:color="@color/colorGrisOscuro" />
 
     <!-- Definir el radio de las esquinas redondeadas -->
     <corners android:radius="12dp" />
@@ -9,7 +9,7 @@
     <!-- Definir un borde alrededor del botón (opcional) -->
     <stroke
         android:width="2dp"
-        android:color="@color/logosPantallaInicio" />
+        android:color="@color/colorGris" />
 
     <!-- Añadir padding interno (opcional) -->
     <padding

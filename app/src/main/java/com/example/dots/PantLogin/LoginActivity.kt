@@ -15,6 +15,7 @@ class LoginActivity : AppCompatActivity() {
     /*OBJETOS VISUALES(botones, textos clickleables, caja de box)--------------------------------------*/
     lateinit var btnAccederSession: Button
     lateinit var tvCreatAcount: TextView
+    lateinit var tvForgotPassword: TextView
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,15 +38,23 @@ class LoginActivity : AppCompatActivity() {
     public  fun Init(){
         btnAccederSession = findViewById(R.id.buttonLogin)
         tvCreatAcount = findViewById(R.id.createAccount)
+        tvForgotPassword = findViewById(R.id.forgotPassword)
     }
 
     public fun InitListeners(){
+        //Configurar boton para iniciar sesion
         btnAccederSession.setOnClickListener{
             val intent = Intent(this , PantallaInicio::class.java)
             startActivity(intent)
         }
+        //Boton para redirigirte a la pantalla de Crear Cuenta(PantallaRegistrarActivity)
         tvCreatAcount.setOnClickListener{
             val intent = Intent(this, PantallaRegistrarActivity::class.java)
+            startActivity(intent)
+        }
+        //Boton para recuperar contraseña
+        tvForgotPassword.setOnClickListener{
+            val intent = Intent(this, ForgotPasswordActivity::class.java)
             startActivity(intent)
         }
     }
