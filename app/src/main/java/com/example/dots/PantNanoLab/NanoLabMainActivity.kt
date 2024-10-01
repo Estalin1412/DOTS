@@ -2,14 +2,18 @@ package com.example.dots.PantNanoLab
 
 import ButtonAdapter
 import ButtonData
+import android.content.Intent
 import android.os.Bundle
+import android.widget.FrameLayout
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.dots.R
 
+
 class NanoLabMainActivity : AppCompatActivity() {
+
 
     /*----------------Definicion de objeto visuales(botones, textoeditables, recicladores visuales---*/
     private lateinit var recyclerView: RecyclerView
@@ -31,7 +35,20 @@ class NanoLabMainActivity : AppCompatActivity() {
     /*----------------FUNCIONES INDEPENDIENTES(funciones que se ejecutan si o si)---------*/
     public fun InitComponents(){
         recyclerView = findViewById(R.id.recyclerViewButtons)
-        buttonsAdapter = ButtonAdapter(buttonList)
+
+
+        buttonsAdapter = ButtonAdapter(buttonList) { buttonData ->
+            when (buttonData.text) {
+                "Nano 1" -> {
+                    // Abrir DataNanoLabActivity cuando se hace clic en "Nano 1"
+                    val intent = Intent(this, DataNanoLabActivity::class.java)
+                    startActivity(intent)
+                }
+                "Nano 2" -> {
+                    // Puedes agregar lógica para otros botones si es necesario
+                }
+            }
+        }
 
     }
     public fun InitListeners(){

@@ -20,12 +20,12 @@
         <!-- Texto "Hogar Inteligente" -->
         <TextView
             android:id="@+id/tvUsuario"
-            android:layout_width="310dp"
+            android:layout_width="280dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
             android:text="Nombre de usuario"
             android:textColor="@color/white"
-            android:textSize="20sp"
-            android:layout_marginTop="16dp"/>
+            android:textSize="20sp" />
     <ImageButton
         android:id="@+id/imbtnOpcionesDeUsuario"
         android:layout_width="20dp"
@@ -49,12 +49,12 @@
         <!-- Texto "Hogar Inteligente" -->
         <TextView
             android:id="@+id/tvDispositivo"
-            android:layout_width="330dp"
+            android:layout_width="287dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
             android:text="Dispositivos"
             android:textColor="@color/white"
-            android:textSize="20sp"
-            android:layout_marginTop="16dp" />
+            android:textSize="20sp" />
         <ImageButton
             android:id="@+id/imbtnOpcionesDispositivos"
             android:layout_width="20dp"

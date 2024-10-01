@@ -8,7 +8,8 @@ import com.example.dots.R
 
 data class ButtonData(val iconResId: Int, val text: String)
 
-class ButtonAdapter(private val buttonList: List<ButtonData>) :
+class ButtonAdapter(private val buttonList: List<ButtonData>,
+    private val onItemClick: (ButtonData) -> Unit) :
     RecyclerView.Adapter<ButtonAdapter.ButtonViewHolder>() {
 
     class ButtonViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -26,6 +27,11 @@ class ButtonAdapter(private val buttonList: List<ButtonData>) :
         val buttonData = buttonList[position]
         holder.icon.setImageResource(buttonData.iconResId)
         holder.text.text = buttonData.text
+
+        holder.itemView.setOnClickListener {
+            onItemClick(buttonData) // Ejecutar la función de clic pasando los datos del botón
+        }
+
     }
 
     override fun getItemCount(): Int {
