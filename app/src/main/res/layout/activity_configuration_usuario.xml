@@ -6,13 +6,11 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginHorizontal="16dp"
-    android:layout_marginVertical="32dp"
 
 
     tools:context=".PantPrincipal.ConfigurationUsuarioActivity"
     android:padding="16dp"
-    android:background="@color/white">
+    android:background="@color/black">
 
    <!-- Título -->
    <LinearLayout
@@ -22,14 +20,21 @@
        android:orientation="horizontal"
        android:gravity="center_vertical"
        android:clickable="true"
-       android:layout_marginBottom="16dp">
+       android:layout_marginBottom="16dp"
+
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintTop_toTopOf="parent"
+       >
 
       <ImageView
-          android:layout_width="22dp"
-          android:layout_height="22dp"
+          android:layout_width="20dp"
+          android:layout_height="20dp"
           android:src="@drawable/botonsiguientederecha"
           android:scaleType="fitXY"
-          android:contentDescription="@string/app_name" />
+          android:contentDescription="@string/app_name"
+
+          />
 
       <TextView
           android:layout_width="match_parent"
@@ -37,7 +42,7 @@
           android:textStyle="bold"
           android:textSize="22sp"
           android:text="DOTS APPLICATION"
-          android:textColor="@color/black"
+          android:textColor="@color/white"
           android:layout_marginStart="8dp" />
    </LinearLayout>
 
@@ -48,12 +53,11 @@
        android:layout_height="wrap_content"
 
        android:text="Set a username and profile photo"
-       android:textColor="@color/black"
+       android:textColor="@color/colorMarineBlue"
        android:textStyle="bold"
        android:textSize="16sp"
        android:gravity="center_vertical"
-       android:backgroundTint="@color/white"
-
+       android:backgroundTint="@color/colorGris"
 
        app:layout_constraintTop_toBottomOf="@+id/lineDotsApp"
        app:layout_constraintStart_toStartOf="parent"
@@ -64,7 +68,7 @@
        android:layout_height="wrap_content"
        android:text="Informacion personal"
        android:textStyle="bold"
-       android:textColor="@color/colorGris"
+       android:textColor="@color/white"
        android:textSize="12sp"
 
        app:layout_constraintTop_toBottomOf="@+id/buttonSetUsernamePhoto"
@@ -96,13 +100,13 @@
              android:layout_height="24dp"
              android:src="@drawable/batch_path1_ajustes"
              android:scaleType="fitXY"
-             android:tint="@color/colorMarineBlue"
+             android:tint="@color/colorGris"
              android:contentDescription="IconoParaVisualizarPassword" />
 
          <TextView
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
-             android:textColor="@color/black"
+             android:textColor="@color/colorMarineBlue"
              android:text="Password"
              android:textSize="22sp"
              android:textStyle="bold" />
@@ -134,7 +138,7 @@
              android:layout_height="24dp"
              android:src="@drawable/batch_path1_usuario"
              android:scaleType="fitXY"
-             android:tint="@color/colorMarineBlue"
+             android:tint="@color/colorGris"
              android:contentDescription="iconoDeImagen" />
 
          <TextView
@@ -142,7 +146,7 @@
              android:layout_height="wrap_content"
              android:text="Email"
              android:textStyle="bold"
-             android:textColor="@color/black"
+             android:textColor="@color/colorMarineBlue"
              android:textSize="22sp" />
       </LinearLayout>
    </androidx.cardview.widget.CardView>
@@ -153,7 +157,7 @@
        android:layout_height="wrap_content"
        android:text="Otros datos"
        android:textStyle="bold"
-       android:textColor="@color/colorGris"
+       android:textColor="@color/white"
        android:textSize="12sp"
 
        app:layout_constraintTop_toBottomOf="@+id/cvPassword"
@@ -167,11 +171,11 @@
        android:layout_height="wrap_content"
 
        android:text="Manage Devices"
-       android:textColor="@color/black"
+       android:textColor="@color/colorMarineBlue"
        android:textSize="16sp"
        android:textStyle="bold"
        android:gravity="center_vertical"
-       android:backgroundTint="@color/white"
+       android:backgroundTint="@color/colorGris"
 
 
        app:layout_constraintTop_toBottomOf="@+id/tvTextoOtros"
@@ -190,11 +194,11 @@
 
 
        android:text="Apps"
-       android:textColor="@color/black"
+       android:textColor="@color/colorMarineBlue"
        android:textStyle="bold"
        android:textSize="16sp"
        android:gravity="center_vertical"
-       android:backgroundTint="@color/white"
+       android:backgroundTint="@color/colorGris"
 
        app:layout_constraintTop_toBottomOf="@+id/buttonManageDevices"
        app:layout_constraintStart_toStartOf="parent"
