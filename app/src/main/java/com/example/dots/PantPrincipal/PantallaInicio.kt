@@ -49,6 +49,10 @@ class PantallaInicio : AppCompatActivity() {
     public fun InitListenersComponents(){
         //Para mostrar opciones flotantes
         imbtnOpcionesDispositivo.setOnClickListener{view -> showPopupMenu(view)}
+        imbtnOpcionUsuario.setOnClickListener{
+            val intent = Intent(this , ConfigurationUsuarioActivity::class.java)
+            startActivity(intent)
+        }
 
     }
 

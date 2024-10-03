@@ -85,4 +85,7 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+    //For include graphix
+    implementation("com.androidplot:androidplot-core:1.5.11")
 }

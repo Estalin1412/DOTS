@@ -29,7 +29,8 @@
         android:textSize="22sp"
         android:textColor="@color/white"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@id/linearDispositivo"/>
+        app:layout_constraintStart_toStartOf="@id/linearDispositivo"
+        />
 
     <!-- Flecha clickeable que redirige a otra pantalla -->
     <ImageView

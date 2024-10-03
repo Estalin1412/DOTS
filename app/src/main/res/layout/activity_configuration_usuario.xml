@@ -1,72 +1,207 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="32dp"
+
+
     tools:context=".PantPrincipal.ConfigurationUsuarioActivity"
     android:padding="16dp"
-    android:background="@color/colorMarineBlue"
-    android:layout_marginVertical="16dp"
-    android:layout_marginHorizontal="16dp">
-    <!--
+    android:background="@color/white">
+
+   <!-- Título -->
+   <LinearLayout
+       android:id="@+id/lineDotsApp"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       android:gravity="center_vertical"
+       android:clickable="true"
+       android:layout_marginBottom="16dp">
+
+      <ImageView
+          android:layout_width="22dp"
+          android:layout_height="22dp"
+          android:src="@drawable/botonsiguientederecha"
+          android:scaleType="fitXY"
+          android:contentDescription="@string/app_name" />
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textStyle="bold"
+          android:textSize="22sp"
+          android:text="DOTS APPLICATION"
+          android:textColor="@color/black"
+          android:layout_marginStart="8dp" />
+   </LinearLayout>
+
+   <!-- Botón para establecer nombre de usuario y foto -->
    <Button
-        android:id="@+id/buttonSetUsernamePhoto"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Set a username and profile photo"
-        android:drawableEnd="@drawable/botonsiguientederecha"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:background="@drawable/rounded_button_background"/>
+       android:id="@+id/buttonSetUsernamePhoto"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
 
-    <TextView
-        android:id="@+id/textSetNickname"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Set nickname"
-        android:drawableEnd="@drawable/botonsiguientederecha"
-        android:paddingVertical="16dp"
-        app:layout_constraintTop_toBottomOf="@id/buttonSetUsernamePhoto"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:background="@drawable/rounded_button_background"/>
+       android:text="Set a username and profile photo"
+       android:textColor="@color/black"
+       android:textStyle="bold"
+       android:textSize="16sp"
+       android:gravity="center_vertical"
+       android:backgroundTint="@color/white"
 
-    <TextView
-        android:id="@+id/textSignInMethods"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Sign-in method"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintTop_toBottomOf="@id/textSetNickname"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:marginVertical="8dp"/>
 
-    <Button
-        android:id="@+id/buttonPassword"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Password"
-        android:drawableStart="@drawable/batch_path1_ajustes"
-        android:drawableEnd="@drawable/rounded_button_background"
-        app:layout_constraintTop_toBottomOf="@id/textSignInMethods"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:background="@drawable/rounded_button_background"/>
+       app:layout_constraintTop_toBottomOf="@+id/lineDotsApp"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toEndOf="parent" />
+   <TextView
+       android:id="@+id/tvObtenerInformacion"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="Informacion personal"
+       android:textStyle="bold"
+       android:textColor="@color/colorGris"
+       android:textSize="12sp"
 
-    <Button
-        android:id="@+id/buttonRecoveryEmail"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Recovery email"
-        android:drawableStart="@drawable/batch_path1_ajustes"
-        app:layout_constraintTop_toBottomOf="@id/buttonPassword"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:background="@drawable/rounded_button_background"/>
+       app:layout_constraintTop_toBottomOf="@+id/buttonSetUsernamePhoto"
 
--->
+       app:layout_constraintStart_toStartOf="parent"
+       />
+   <!-- Tarjeta para Password -->
+   <androidx.cardview.widget.CardView
+       android:id="@+id/cvPassword"
+       android:layout_width="0dp"
+       android:layout_height="wrap_content"
+       app:cardBackgroundColor="@color/colorUsuarioWhite"
+       app:cardCornerRadius="16dp"
+       android:layout_marginEnd="8dp"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toStartOf="@+id/cvEmail"
+       app:layout_constraintTop_toBottomOf="@+id/tvObtenerInformacion"
+       android:layout_marginTop="16dp">
+
+      <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:gravity="center_vertical"
+          android:orientation="vertical"
+          android:padding="12dp">
+
+         <ImageView
+             android:layout_width="24dp"
+             android:layout_height="24dp"
+             android:src="@drawable/batch_path1_ajustes"
+             android:scaleType="fitXY"
+             android:tint="@color/colorMarineBlue"
+             android:contentDescription="IconoParaVisualizarPassword" />
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:textColor="@color/black"
+             android:text="Password"
+             android:textSize="22sp"
+             android:textStyle="bold" />
+      </LinearLayout>
+   </androidx.cardview.widget.CardView>
+
+   <!-- Tarjeta para Email -->
+   <androidx.cardview.widget.CardView
+       android:id="@+id/cvEmail"
+       android:layout_width="0dp"
+       android:layout_height="wrap_content"
+       app:cardBackgroundColor="@color/colorUsuarioWhite"
+       app:cardCornerRadius="16dp"
+       android:layout_marginStart="8dp"
+       app:layout_constraintTop_toBottomOf="@+id/tvObtenerInformacion"
+       app:layout_constraintStart_toEndOf="@+id/cvPassword"
+       app:layout_constraintEnd_toEndOf="parent"
+       android:layout_marginTop="16dp">
+
+      <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:gravity="center_vertical"
+          android:orientation="vertical"
+          android:padding="12dp">
+
+         <ImageView
+             android:layout_width="24dp"
+             android:layout_height="24dp"
+             android:src="@drawable/batch_path1_usuario"
+             android:scaleType="fitXY"
+             android:tint="@color/colorMarineBlue"
+             android:contentDescription="iconoDeImagen" />
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Email"
+             android:textStyle="bold"
+             android:textColor="@color/black"
+             android:textSize="22sp" />
+      </LinearLayout>
+   </androidx.cardview.widget.CardView>
+
+   <TextView
+       android:id="@+id/tvTextoOtros"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="Otros datos"
+       android:textStyle="bold"
+       android:textColor="@color/colorGris"
+       android:textSize="12sp"
+
+       app:layout_constraintTop_toBottomOf="@+id/cvPassword"
+
+       app:layout_constraintStart_toStartOf="parent"
+       />
+   <!-- Botón para "Manage Devices" -->
+   <Button
+       android:id="@+id/buttonManageDevices"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+
+       android:text="Manage Devices"
+       android:textColor="@color/black"
+       android:textSize="16sp"
+       android:textStyle="bold"
+       android:gravity="center_vertical"
+       android:backgroundTint="@color/white"
+
+
+       app:layout_constraintTop_toBottomOf="@+id/tvTextoOtros"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       android:layout_marginTop="16dp"
+       android:drawableEnd="@drawable/botonsiguientederecha"
+       >
+   </Button>
+
+   <!-- Botón para "Apps" -->
+   <Button
+       android:id="@+id/buttonApps"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+
+
+       android:text="Apps"
+       android:textColor="@color/black"
+       android:textStyle="bold"
+       android:textSize="16sp"
+       android:gravity="center_vertical"
+       android:backgroundTint="@color/white"
+
+       app:layout_constraintTop_toBottomOf="@+id/buttonManageDevices"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       android:layout_marginTop="16dp"
+       android:drawableEnd="@drawable/botonsiguientederecha"
+       />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+

@@ -104,7 +104,6 @@
         android:textColor="@color/white"
         android:backgroundTint="@color/colorGris" />
 
-    <!--
     <LinearLayout
         android:id="@+id/bottomNavigation"
         android:layout_width="match_parent"
@@ -188,7 +187,7 @@
                 android:textColor="@color/white" />
         </LinearLayout>
     </LinearLayout>
-    -->
+
 
 
 </RelativeLayout>

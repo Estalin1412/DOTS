@@ -31,7 +31,8 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         <activity
             android:name=".PantPrincipal.usuarioActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         <activity
             android:name=".PantLogin.PantallaRegistrarActivity"
             android:exported="false" />

@@ -36,7 +36,20 @@ class NanoLabMainActivity : AppCompatActivity() {
         recyclerView = findViewById(R.id.recyclerViewButtons)
         //Para clicker en el adaptador
         buttonsAdapter = ButtonAdapter(buttonList){
-            buttonData ->  onButtonClicked(buttonData)
+
+        }
+
+        buttonsAdapter = ButtonAdapter(buttonList) { buttonData ->
+            when (buttonData.text) {
+                "Nano 1" -> {
+                    // Abrir DataNanoLabActivity cuando se hace clic en "Nano 1"
+                    val intent = Intent(this, DataNanoLabActivity::class.java)
+                    startActivity(intent)
+                }
+                "Nano 2" -> {
+                    // Puedes agregar lógica para otros botones si es necesario
+                }
+            }
         }
 
     }
@@ -48,9 +61,6 @@ class NanoLabMainActivity : AppCompatActivity() {
     /*FUNCIONES DEPENDIENTES, SE EJECUTAN en las funciones dependiente---------------------*/
 
     //Funcion para manejaer el click en los botones
-    private fun onButtonClicked(buttonData: ButtonData){
-        val intent = Intent(this, DataNanoLabActivity::class.java)
-        startActivity(intent)
-    }
+
 
 }
