@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PantUsuario.ayudaPrincipalActivity"
+    android:padding="16dp"
+    android:background="@color/black">
+
+    <!-- Header Título -->
+    <TextView
+        android:id="@+id/titleAddDevice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Añadir dispositivo"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Mensaje de Bluetooth -->
+    <TextView
+        android:id="@+id/bluetoothMessage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:text="Enciende el Bluetooth para encontrar dispositivos Bluetooth cercanos."
+        android:textSize="16sp"
+        android:textColor="@color/teal_700"
+        android:backgroundTint="@color/celesteClaro"
+        android:background="@drawable/rounded_button_background"
+        android:padding="12dp"
+
+        android:clickable="true"
+
+        app:layout_constraintTop_toBottomOf="@id/titleAddDevice"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Descubrir dispositivos cercanos -->
+    <LinearLayout
+        android:id="@+id/discoverDevicesLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/rounded_button_background"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/bluetoothMessage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:id="@+id/discoverDevicesTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Descubrir dispositivos cercanos"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/discoverDevicesSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Detectando dispositivos cercanos automáticamente..."
+            android:textSize="14sp"
+            android:textColor="@color/colorGris"
+            android:layout_marginBottom="12dp" />
+
+        <ImageView
+            android:id="@+id/discoverDevicesImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/batch_path1_ajustes"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:id="@+id/discoverDevicesMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No se encontraron dispositivos. Añada de la siguiente lista."
+            android:textSize="14sp"
+            android:textColor="@color/Amarillo"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+
+    <!-- Escanear código -->
+    <LinearLayout
+        android:id="@+id/scanCodeLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/rounded_button_background"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/discoverDevicesLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp">
+
+        <ImageView
+            android:id="@+id/scanCodeIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/batch_path1_ajustes"
+            android:layout_gravity="center_vertical" />
+
+        <TextView
+            android:id="@+id/scanCodeText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Escanee el código para añadir..."
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp" />
+    </LinearLayout>
+
+    <!-- Añadir dispositivos manualmente -->
+    <TextView
+        android:id="@+id/addDevicesManuallyTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Añadir dispositivos manualmente"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/scanCodeLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Opciones de dispositivos manuales -->
+   <ScrollView
+       android:layout_width="0dp"
+       android:layout_height="wrap_content"
+       app:layout_constraintTop_toBottomOf="@id/addDevicesManuallyTitle"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+
+       >
+       <LinearLayout
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"/>
+
+
+   </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

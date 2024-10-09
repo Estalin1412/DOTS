@@ -4,6 +4,7 @@ import ButtonAdapter
 import ButtonData
 import android.content.Intent
 import android.os.Bundle
+import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
@@ -14,6 +15,8 @@ import com.example.dots.R
 class NanoLabMainActivity : AppCompatActivity() {
 
     /*----------------Definicion de objeto visuales(botones, textoeditables, recicladores visuales---*/
+    lateinit var btnGestionarDispositivo: ImageView
+    lateinit var btnDispositivoConectado: ImageView
     private lateinit var recyclerView: RecyclerView
     private lateinit var buttonsAdapter: ButtonAdapter
     /*Definicion de Objetos con listas----------------------------------------------------*/
@@ -34,6 +37,8 @@ class NanoLabMainActivity : AppCompatActivity() {
     /*----------------FUNCIONES INDEPENDIENTES(funciones que se ejecutan si o si)---------*/
     public fun InitComponents(){
         recyclerView = findViewById(R.id.recyclerViewButtons)
+        btnGestionarDispositivo = findViewById(R.id.iconArrowRight)
+        btnDispositivoConectado = findViewById(R.id.arrowIcon)
         //Para clicker en el adaptador
         buttonsAdapter = ButtonAdapter(buttonList){
 
@@ -54,6 +59,14 @@ class NanoLabMainActivity : AppCompatActivity() {
 
     }
     public fun InitListeners(){
+        btnGestionarDispositivo.setOnClickListener{
+            val intent = Intent(this, addDiviceNanoLabMainActivity::class.java)
+            startActivity(intent)
+        }
+        btnDispositivoConectado.setOnClickListener{
+            val intent = Intent(this, NanoLabMainDispositivoActivity::class.java)
+            startActivity(intent)
+        }
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = buttonsAdapter
         buttonList

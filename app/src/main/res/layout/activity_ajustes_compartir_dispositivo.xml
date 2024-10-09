@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:padding="16dp"
+    tools:context=".PantUsuario.Ajustes.AjustesCompartirDispositivoActivity">
+        <!-- Título Principal -->
+        <TextView
+            android:id="@+id/titleSharedDevices"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dispositivos compartidos"
+            android:textSize="24sp"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Botones Compartir y Aceptar -->
+        <LinearLayout
+            android:id="@+id/buttonsLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/titleSharedDevices"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <Button
+                android:id="@+id/buttonCompartir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Compartir"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/colorGris"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/buttonAceptar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Aceptar"
+                android:textColor="@color/colorGris"
+                android:backgroundTint="@android:color/transparent"
+                />
+        </LinearLayout>
+
+        <!-- Imagen de fondo para dispositivos no compartidos -->
+        <ImageView
+            android:id="@+id/imageNoDevices"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/batch_path1_conectarse"
+            app:layout_constraintTop_toBottomOf="@id/buttonsLayout"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Texto "No hay dispositivos compartidos" -->
+        <TextView
+            android:id="@+id/textNoDevices"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No hay dispositivos compartidos"
+            android:textSize="16sp"
+            android:textColor="@color/colorGris"
+            app:layout_constraintTop_toBottomOf="@id/imageNoDevices"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

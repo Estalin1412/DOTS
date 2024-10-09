@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/black"
+    tools:context=".PantUsuario.Ajustes.AjustesNotificacionesActivity">
+
+        <!-- Título de la pantalla -->
+        <TextView
+            android:id="@+id/titleNotificationSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ajustes de notificación"
+            android:textSize="24sp"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginBottom="16dp" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@id/titleNotificationSettings"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Sección: Panel de control -->
+                <TextView
+                    android:id="@+id/sectionControlPanel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Panel de control"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorGris"
+                    android:layout_marginTop="8dp" />
+
+                <!-- Ubicación del panel de control -->
+                <TextView
+                    android:id="@+id/controlPanelLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ubicación del panel de control"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:padding="16dp"
+                    android:background="@drawable/rounded_button_background"
+                    android:layout_marginTop="8dp" />
+
+                <!-- Sección: Mensajes del sistema recibidos -->
+                <TextView
+                    android:id="@+id/sectionSystemMessages"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mensajes del sistema recibidos"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorGris"
+                    android:layout_marginTop="16dp" />
+
+                <!-- Notificaciones del sistema -->
+                <TextView
+                    android:id="@+id/systemNotifications"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Notificaciones del sistema"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:padding="16dp"
+                    android:background="@drawable/rounded_button_background"
+                    android:layout_marginTop="8dp" />
+
+                <!-- Descripción de las notificaciones del sistema -->
+                <TextView
+                    android:id="@+id/systemNotificationsDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mensajes oficiales, notificaciones de uso compartido, mensajes inteligentes sobre el hogar en general, etc."
+                    android:textSize="14sp"
+                    android:textColor="@color/colorGrisOscuro"
+                    android:padding="16dp"
+                    android:layout_marginTop="4dp" />
+
+                <!-- Sección: Mensajes del dispositivo recibidos -->
+                <TextView
+                    android:id="@+id/sectionDeviceMessages"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mensajes del dispositivo recibidos"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorGris"
+                    android:layout_marginTop="16dp" />
+
+                <!-- Notificaciones del dispositivo -->
+                <LinearLayout
+                    android:id="@+id/deviceNotificationsLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@drawable/rounded_button_background"
+                    android:padding="16dp"
+                    android:layout_marginTop="8dp">
+
+                    <TextView
+                        android:id="@+id/deviceNotificationsLabel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Notificaciones del dispositivo"
+                        android:textSize="16sp"
+                        android:textColor="@color/white" />
+
+                    <Switch
+                        android:id="@+id/deviceNotificationsSwitch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true" />
+                </LinearLayout>
+
+                <!-- Administración de notificaciones del dispositivo -->
+                <TextView
+                    android:id="@+id/deviceNotificationManagement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Administración de notificaciones del dispositivo"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:padding="16dp"
+                    android:background="@drawable/rounded_button_background"
+                    android:layout_marginTop="8dp" />
+
+                <!-- Sección: Recibir notificaciones de escenas -->
+                <TextView
+                    android:id="@+id/sectionSceneNotifications"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Recibir notificaciones de escenas"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorGris"
+                    android:layout_marginTop="16dp" />
+
+                <!-- Notificaciones sobre el resultado de implementación de las escenas -->
+                <LinearLayout
+                    android:id="@+id/sceneNotificationsLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@drawable/rounded_button_background"
+                    android:padding="16dp"
+                    android:layout_marginTop="8dp">
+
+                    <TextView
+                        android:id="@+id/sceneNotificationsLabel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Notificaciones sobre el resultado"
+                        android:textSize="16sp"
+                        android:textColor="@color/white" />
+
+                    <Switch
+                        android:id="@+id/sceneNotificationsSwitch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:textColorHighlight="@color/colorVerde"
+                        />
+                </LinearLayout>
+
+                <!-- Administración de notificaciones de escenas -->
+                <TextView
+                    android:id="@+id/sceneNotificationManagement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Administración de notificaciones de escenas"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:padding="16dp"
+                    android:background="@drawable/rounded_button_background"
+                    android:layout_marginTop="8dp" />
+
+                <!-- Sección: No molestar -->
+                <TextView
+                    android:id="@+id/sectionDoNotDisturb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No molestar"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorGris"
+                    android:layout_marginTop="16dp" />
+
+                <!-- Ajustes de No molestar -->
+                <TextView
+                    android:id="@+id/doNotDisturbSettings"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ajustes de No molestar"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:padding="16dp"
+                    android:background="@drawable/rounded_button_background"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

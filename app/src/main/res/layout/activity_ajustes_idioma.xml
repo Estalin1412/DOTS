@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".PantUsuario.Ajustes.AjustesIdiomaActivity">
+
+
+        <!-- ScrollView para contener todos los idiomas -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="16dp"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Campo de búsqueda de idioma -->
+                <androidx.appcompat.widget.SearchView
+                    android:id="@+id/searchView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:queryHint="Buscar"
+                    android:iconifiedByDefault="false"
+                    android:background="@color/black"
+                    android:textColorHint="@color/colorGris"
+                    android:textColor="@color/white" />
+
+                <!-- Lista de opciones de idiomas -->
+                <TextView
+                    android:id="@+id/predeterminado"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Predeterminado"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="16dp" />
+
+                <TextView
+                    android:id="@+id/chinese_simplified"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="简体中文"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="16dp" />
+
+                <TextView
+                    android:id="@+id/chinese_traditional_taiwan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="繁體中文 (台灣)"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="16dp" />
+
+                <TextView
+                    android:id="@+id/chinese_traditional_hongkong"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="繁體中文 (香港)"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="16dp" />
+
+                <TextView
+                    android:id="@+id/english"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="English"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="16dp" />
+
+                <TextView
+                    android:id="@+id/spanish"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Español"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="16dp" />
+
+                <TextView
+                    android:id="@+id/russian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Русский"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="16dp" />
+
+                <TextView
+                    android:id="@+id/korean"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="한국어"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="16dp" />
+
+                <TextView
+                    android:id="@+id/italian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Italiano"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="16dp" />
+
+                <TextView
+                    android:id="@+id/french"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Français"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="16dp" />
+
+                <TextView
+                    android:id="@+id/german"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Deutsch"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="16dp" />
+
+                <TextView
+                    android:id="@+id/indonesian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bahasa Indonesia"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="16dp" />
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

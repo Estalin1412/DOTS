@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/black"
+    tools:context=".PantUsuario.Ajustes.AjustesActualizacionesActivity">
+        <!-- Título Principal -->
+        <TextView
+            android:id="@+id/titleCheckUpdates"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Buscar actualizaciones"
+            android:textSize="24sp"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="24dp"/>
+
+        <!-- Actualizaciones automáticas de firmware -->
+        <LinearLayout
+            android:id="@+id/firmwareUpdateLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/rounded_button_background"
+            android:padding="16dp"
+            app:layout_constraintTop_toBottomOf="@id/titleCheckUpdates"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:id="@+id/firmwareUpdateLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Actualizaciones automáticas de firmware"
+                android:textSize="16sp"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/firmwareUpdateStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Desactivada"
+                android:textSize="16sp"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+
+        <!-- Descripción del proceso de actualización -->
+        <TextView
+            android:id="@+id/updateDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Los dispositivos compatibles con esta función intentarán actualizar el firmware automáticamente entre las 2:00 y las 6:00 de la mañana sin ninguna notificación de audio o de luz. Algunos dispositivos, como las cámaras, se pondrán en pausa durante la actualización del firmware y reanudarán el funcionamiento cuando termine."
+            android:textSize="14sp"
+            android:textColor="@color/colorGris"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/firmwareUpdateLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!-- Ícono de verificación -->
+        <ImageView
+            android:id="@+id/checkIcon"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/batch_path1_ajustes"
+        app:layout_constraintTop_toBottomOf="@id/updateDescription"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"/>
+
+        <!-- Texto de estado de actualizaciones -->
+        <TextView
+            android:id="@+id/noUpdatesAvailable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No hay actualizaciones disponibles"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/checkIcon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

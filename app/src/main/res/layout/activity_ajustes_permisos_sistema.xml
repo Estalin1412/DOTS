@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/black"
+    tools:context=".PantUsuario.Ajustes.AjustesPermisosSistemaActivity">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- Título Principal -->
+                <TextView
+                    android:id="@+id/titlePermissions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Administración de permisos del sistema"
+                    android:textSize="24sp"
+                    android:textColor="@color/white"
+                    android:layout_marginBottom="16dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <!-- Acceder a la ubicación -->
+                <LinearLayout
+                    android:id="@+id/locationAccessLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/rounded_button_background"
+                    android:padding="16dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@id/titlePermissions"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <TextView
+                        android:id="@+id/locationAccessTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Acceder a la ubicación"
+                        android:textSize="16sp"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/locationAccessDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Se utiliza para automatizar, adquirir listas de Wi-Fi y Bluetooth con una conexión rápida, y descubrir dispositivos cercanos."
+                        android:textSize="14sp"
+                        android:textColor="@color/colorGris"
+                        android:layout_marginTop="4dp" />
+
+                    <TextView
+                        android:id="@+id/locationAccessStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Permitido"
+                        android:textSize="14sp"
+                        android:textColor="@color/white"
+                        android:layout_marginTop="8dp"
+                        android:gravity="end"
+                        android:layout_gravity="end" />
+                </LinearLayout>
+
+                <!-- Acceso a la cámara -->
+                <LinearLayout
+                    android:id="@+id/cameraAccessLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/rounded_button_background"
+                    android:padding="16dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@id/locationAccessLayout"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <TextView
+                        android:id="@+id/cameraAccessTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Acceso a la cámara"
+                        android:textSize="16sp"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/cameraAccessDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Se utiliza para escanear el Código QR para instalar dispositivos, iniciar sesión en cuentas, entre otras."
+                        android:textSize="14sp"
+                        android:textColor="@color/colorGris"
+                        android:layout_marginTop="4dp" />
+
+                    <TextView
+                        android:id="@+id/cameraAccessStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Permitido"
+                        android:textSize="14sp"
+                        android:textColor="@color/white"
+                        android:layout_marginTop="8dp"
+                        android:gravity="end"
+                        android:layout_gravity="end" />
+                </LinearLayout>
+
+                <!-- Acceso a grabación de audio -->
+                <LinearLayout
+                    android:id="@+id/audioAccessLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/rounded_button_background"
+                    android:padding="16dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@id/cameraAccessLayout"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <TextView
+                        android:id="@+id/audioAccessTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Acceso a grabación de audio"
+                        android:textSize="16sp"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/audioAccessDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Se utiliza para captar sonidos de comandos de voz, llamadas de voz y otras funciones si el usuario vincula cámaras, videoporteros, Mi AI S..."
+                        android:textSize="14sp"
+                        android:textColor="@color/colorGris"
+                        android:layout_marginTop="4dp" />
+
+                    <TextView
+                        android:id="@+id/audioAccessStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Activar"
+                        android:textSize="14sp"
+                        android:textColor="@color/Amarillo"
+                        android:layout_marginTop="8dp"
+                        android:gravity="end"
+                        android:layout_gravity="end" />
+                </LinearLayout>
+
+                <!-- Acceso al almacenamiento del teléfono -->
+                <LinearLayout
+                    android:id="@+id/storageAccessLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/rounded_button_background"
+                    android:padding="16dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@id/audioAccessLayout"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <TextView
+                        android:id="@+id/storageAccessTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Acceso al almacenamiento del teléfono"
+                        android:textSize="16sp"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/storageAccessDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Se utiliza para leer y escribir fotos y archivos en su dispositivo por las funciones de escaneado, comentarios del usuario y otras."
+                        android:textSize="14sp"
+                        android:textColor="@color/colorGris"
+                        android:layout_marginTop="4dp" />
+
+                    <TextView
+                        android:id="@+id/storageAccessStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Activar"
+                        android:textSize="14sp"
+                        android:textColor="@color/Amarillo"
+                        android:layout_marginTop="8dp"
+                        android:gravity="end"
+                        android:layout_gravity="end" />
+                </LinearLayout>
+
+                <!-- Permisos para acceder a las ventanas emergentes -->
+                <LinearLayout
+                    android:id="@+id/popUpAccessLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/rounded_button_background"
+                    android:padding="16dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@id/storageAccessLayout"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <TextView
+                        android:id="@+id/popUpAccessTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Permisos para acceder a las ventanas emergentes"
+                        android:textSize="16sp"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/popUpAccessDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Se utiliza para mostrar lo que graba la cámara en tiempo real en la ventana emergente si el usuario vincula una cámara con la aplicación Mi Home."
+                        android:textSize="14sp"
+                        android:textColor="@color/colorGris"
+                        android:layout_marginTop="4dp" />
+
+                    <TextView
+                        android:id="@+id/popUpAccessStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Activar"
+                        android:textSize="14sp"
+                        android:textColor="@color/Amarillo"
+                        android:layout_marginTop="8dp"
+                        android:gravity="end"
+                        android:layout_gravity="end" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>

@@ -140,24 +140,30 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:background="@color/black"
+
+        android:layout_marginBottom="32dp"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:weightSum="3">
+      >
 
         <LinearLayout
+            android:id="@+id/linearIdInicio"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+
+
             android:gravity="center"
             android:orientation="vertical">
 
-            <ImageButton
+            <ImageView
                 android:id="@+id/btnHome"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="8dp"
-                android:src="@drawable/batch_path1_ajustes"
+                android:src="@drawable/logocasa"
                 android:scaleType="fitXY"
                 android:contentDescription="Mi Home"
                 android:background="?attr/selectableItemBackgroundBorderless"/>
@@ -165,23 +171,26 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Mi dispositivo"
+                android:text="DOTSapp"
                 android:textColor="@color/white"/>
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/linearDatosGenerales"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:clickable="true"
+            >
 
-            <ImageButton
+            <ImageView
                 android:id="@+id/btnIntelligent"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="8dp"
-                android:src="@drawable/batch_path1_datos"
+                android:src="@drawable/batch_path1_ajustes"
                 android:scaleType="fitXY"
                 android:contentDescription="Inteligente"
                 android:background="?attr/selectableItemBackgroundBorderless"/>
@@ -194,13 +203,16 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/linearCuenta"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:clickable="true"
+            >
 
-            <ImageButton
+            <ImageView
                 android:id="@+id/btnProfile"
                 android:layout_width="50dp"
                 android:layout_height="50dp"

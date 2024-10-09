@@ -18,21 +18,69 @@
         android:theme="@style/Theme.DOTS"
         tools:targetApi="31">
         <activity
-            android:name=".PantPrincipal.ConfigurationUsuarioActivity"
+            android:name=".PantUsuario.Ajustes.AjustesActualizacionesActivity"
             android:exported="false" />
+        <activity
+            android:name=".PantUsuario.Ajustes.AjustesAcercaDotsAppActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PantUsuario.Ajustes.AjustesPrivacidadInfoLegalActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PantUsuario.Ajustes.AjustesCompartirDispositivoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PantUsuario.Ajustes.AjustesSeguridadActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".PantUsuario.Ajustes.AjustesIdiomaActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".PantUsuario.Ajustes.AjustesPaisActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".PantUsuario.Ajustes.AjustesPermisosSistemaActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".PantNanoLab.NanoLabMainDispositivoActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".PantUsuario.Ajustes.AjustesNotificacionesActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".PantNanoLab.addDiviceNanoLabMainActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".PantUsuario.AjustesActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".PantUsuario.ayudaPrincipalActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".PantPrincipal.ConfigurationUsuarioActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".PantNanoLab.DataNanoLabActivity"
             android:exported="false"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            ></activity>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".PantNanoLab.NanoLabMainActivity"
             android:exported="false"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".PantPrincipal.usuarioActivity"
             android:exported="false"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".PantLogin.PantallaRegistrarActivity"
             android:exported="false" />
@@ -51,7 +99,8 @@
         </activity>
         <activity
             android:name=".PantPrincipal.PantallaInicio"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
     </application>
 
 </manifest>

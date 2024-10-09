@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -13,11 +13,14 @@
     <!-- Sección superior con el número de dispositivo y la flecha -->
     <LinearLayout
         android:id="@+id/headerLayout"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center_vertical"
         android:layout_marginBottom="8dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         >
 
         <!-- Número del dispositivo -->
@@ -25,7 +28,7 @@
             android:id="@+id/deviceNumber"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="6754921180"
+            android:text="Jose"
             android:textSize="22sp"
             android:textColor="@color/white"
             android:textStyle="bold" />
@@ -49,13 +52,17 @@
         android:id="@+id/deviceDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Gestionar dispositivos"
+        android:text="Gestionar cuenta"
         android:textSize="14sp"
-        android:textColor="@color/white"
+        android:textColor="@color/colorGris"
         android:layout_below="@id/headerLayout"
         android:layout_marginTop="4dp"
         android:clickable="true"
-        android:focusable="true" />
+        android:focusable="true"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerLayout"
+        />
 
     <!-- Imagen clickeable a la derecha -->
     <ImageView
@@ -67,7 +74,115 @@
         android:layout_alignParentEnd="true"
         android:layout_below="@id/headerLayout"
         android:clickable="true"
-        android:focusable="true" />
+        android:focusable="true"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvPassword"
+        android:layout_width="0dp"
+        android:layout_height="90dp"
+        app:cardBackgroundColor="@color/config_usuarioVerdeClaro"
+        app:cardCornerRadius="16dp"
+
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/cvEmail"
+        app:layout_constraintTop_toBottomOf="@+id/deviceDescription"
+        android:layout_marginTop="16dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/batch_path1_ajustes"
+                android:scaleType="fitXY"
+                android:tint="@color/config_usuarioVerde"
+                android:contentDescription="IconoParaVisualizarPassword" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorMarineBlue"
+                android:text="Password"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Tarjeta para Email -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/config_usuarioAzulClaro"
+        app:cardCornerRadius="16dp"
+        android:orientation="vertical"
+
+
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+
+        app:layout_constraintTop_toBottomOf="@+id/deviceDescription"
+        app:layout_constraintStart_toEndOf="@+id/cvPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="90dp"
+            android:orientation="vertical"
+            android:padding="12dp"
+            >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/batch_path1_usuario"
+                android:scaleType="fitXY"
+                android:tint="@color/config_usuarioAzul"
+                android:contentDescription="iconoDeImagen" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:textStyle="bold"
+                android:textColor="@color/colorMarineBlue"
+                android:textSize="22sp"
+
+                android:layout_marginStart="10dp"
+                />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="jemd2203@gmail.com"
+                    android:textColor="@color/black"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
 
     <!-- Botones principales debajo de todo -->
     <LinearLayout
@@ -76,11 +191,16 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_below="@id/deviceDescription"
-        android:layout_marginTop="32dp">
+        android:layout_marginTop="32dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cvPassword"
+        >
 
         <!-- Primer botón: Hogar -->
         <LinearLayout
-            android:id="@+id/homeButton"
+            android:id="@+id/linearConfigCuenta"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -102,7 +222,7 @@
                 android:id="@+id/homeText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Hogar de 6754921180"
+                android:text="Configuración de cuenta"
                 android:textSize="16sp"
                 android:textColor="@color/white"
                 android:layout_marginStart="16dp" />
@@ -132,7 +252,7 @@
                 android:id="@+id/voiceAssistantText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Asistente de voz"
+                android:text="Configuracion de usuario"
                 android:textSize="16sp"
                 android:textColor="@color/white"
                 android:layout_marginStart="16dp" />
@@ -140,7 +260,7 @@
 
         <!-- Tercer botón: Estaciones y puertas de enlace -->
         <LinearLayout
-            android:id="@+id/stationsButton"
+            android:id="@+id/linearAjustes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -155,6 +275,7 @@
                 android:id="@+id/stationsIcon"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
+                android:tint="@color/colorGris"
                 android:src="@drawable/batch_path1_ajustes"
                 android:contentDescription="Icono de estaciones" />
 
@@ -162,7 +283,7 @@
                 android:id="@+id/stationsText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Estaciones centrales y puertas de enlace"
+                android:text="Ajustes"
                 android:textSize="16sp"
                 android:textColor="@color/white"
                 android:layout_marginStart="16dp" />
@@ -170,7 +291,7 @@
 
         <!-- Cuarto botón: Ajustes adicionales -->
         <LinearLayout
-            android:id="@+id/additionalSettingsButton"
+            android:id="@+id/linearButtomAyudaRecomendaciones"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -192,40 +313,109 @@
                 android:id="@+id/settingsText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Ajustes adicionales"
+                android:text="Ayuda y recomendaciones"
                 android:textSize="16sp"
                 android:textColor="@color/white"
                 android:layout_marginStart="16dp" />
         </LinearLayout>
 
-        <!-- Quinto botón: Ayuda y comentarios -->
+    </LinearLayout>
+
+    <!-- Barra de navegación inferior -->
+    <LinearLayout
+        android:id="@+id/bottomNavigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/black"
+
+        android:layout_marginBottom="32dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
         <LinearLayout
-            android:id="@+id/helpButton"
-            android:layout_width="match_parent"
+            android:id="@+id/linearIdInicio"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="@drawable/rounded_button_background"
-            android:gravity="center_vertical"
-            android:padding="16dp"
-            android:layout_marginBottom="16dp"
-            android:clickable="true"
-            android:focusable="true">
+            android:layout_weight="1"
+
+
+            android:gravity="center"
+            android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/helpIcon"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/batch_path1_ajustes"
-                android:contentDescription="Icono de ayuda y comentarios" />
+                android:id="@+id/btnHome"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/logocasa"
+                android:scaleType="fitXY"
+                android:contentDescription="Mi Home"
+                android:background="?attr/selectableItemBackgroundBorderless"/>
 
             <TextView
-                android:id="@+id/helpText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Ayuda y comentarios"
-                android:textSize="16sp"
-                android:textColor="@color/white"
-                android:layout_marginStart="16dp" />
+                android:text="DOTSapp"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearDatosGenerales"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:clickable="true"
+            >
+
+            <ImageView
+                android:id="@+id/btnIntelligent"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/batch_path1_ajustes"
+                android:scaleType="fitXY"
+                android:contentDescription="Inteligente"
+                android:background="?attr/selectableItemBackgroundBorderless"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mis datos"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearCuenta"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:clickable="true"
+            >
+
+            <ImageView
+                android:id="@+id/btnProfile"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/batch_path1_usuario"
+                android:scaleType="fitXY"
+                android:contentDescription="Perfil"
+                android:background="?attr/selectableItemBackgroundBorderless"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Perfil"
+                android:textColor="@color/white"/>
         </LinearLayout>
     </LinearLayout>
-</RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

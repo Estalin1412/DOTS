@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageButton
+import android.widget.LinearLayout
 import android.widget.PopupMenu
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -22,6 +23,7 @@ class PantallaInicio : AppCompatActivity() {
     //Definicion de variable para botones en de activity_pantalla_inicio.xml
     lateinit var imbtnOpcionUsuario: ImageButton
     lateinit var imbtnOpcionesDispositivo: ImageButton
+    lateinit var btnCuenta: LinearLayout
 
 
 
@@ -53,6 +55,7 @@ class PantallaInicio : AppCompatActivity() {
     public fun InitComponentes(){
         imbtnOpcionUsuario = findViewById(R.id.imbtnOpcionesDeUsuario)
         imbtnOpcionesDispositivo = findViewById(R.id.imbtnOpcionesDispositivos)
+        btnCuenta = findViewById(R.id.linearCuenta)
     }
     //Funcion
     public fun InitListenersComponents(){
@@ -60,6 +63,11 @@ class PantallaInicio : AppCompatActivity() {
         imbtnOpcionesDispositivo.setOnClickListener{view -> showPopupMenu(view)}
         imbtnOpcionUsuario.setOnClickListener{
             val intent = Intent(this , ConfigurationUsuarioActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnCuenta.setOnClickListener{
+            val intent = Intent(this, usuarioActivity::class.java)
             startActivity(intent)
         }
 

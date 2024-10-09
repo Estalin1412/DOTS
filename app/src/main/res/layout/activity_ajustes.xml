@@ -1,0 +1,641 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainSettingsLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PantUsuario.AjustesActivity"
+    android:padding="16dp"
+    android:background="@color/black">
+    <!-- Título Principal -->
+    <TextView
+        android:id="@+id/titleSettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ajustes adicionales"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintTop_toBottomOf="@+id/titleSettings"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintScrolAjustes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            >
+
+            <!-- Sección General -->
+            <TextView
+                android:id="@+id/sectionGeneral"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="General"
+                android:textSize="14sp"
+                android:textColor="@color/colorGris"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="8dp"/>
+
+            <!-- Ajustes de notificación -->
+            <TextView
+                android:id="@+id/tvNotificationSettingsText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:text="Ajustes de notificación"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:padding="16dp"
+                android:background="@drawable/rounded_button_background"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@id/sectionGeneral"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <!-- Ajustes de seguridad -->
+            <TextView
+                android:id="@+id/textViewAjustesSguridad"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Ajustes de seguridad"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:padding="16dp"
+                android:background="@drawable/rounded_button_background"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@id/tvNotificationSettingsText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <!-- Unidades de temperatura -->
+            <LinearLayout
+                android:id="@+id/temperatureUnitsLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/rounded_button_background"
+                android:padding="16dp"
+                app:layout_constraintTop_toBottomOf="@id/textViewAjustesSguridad"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/temperatureLabelText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Unidades de medida"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"/>
+
+                <TextView
+                    android:id="@+id/temperatureUnitText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SISEUK"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+
+            <!-- Modo oscuro -->
+            <LinearLayout
+                android:id="@+id/darkModeLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/rounded_button_background"
+                android:padding="16dp"
+                app:layout_constraintTop_toBottomOf="@id/temperatureUnitsLayout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/darkModeLabelText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Modo oscuro de los complementos"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"/>
+
+                <Switch
+                    android:id="@+id/darkModeSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"/>
+            </LinearLayout>
+
+            <!-- Sección dispositivos -->
+            <TextView
+                android:id="@+id/sectionDevices"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Grupos y dispositivos"
+                android:textSize="14sp"
+                android:textColor="@color/colorGris"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@id/darkModeLayout"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <!-- Administrar dispositivos -->
+            <TextView
+                android:id="@+id/manageHomesText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Administrar dispositivos"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:padding="16dp"
+                android:background="@drawable/rounded_button_background"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@id/sectionDevices"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <!-- Compartir dispositivo -->
+            <TextView
+                android:id="@+id/textViewDispositivosCompartidos"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Compartir dispositivo"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:padding="16dp"
+                android:background="@drawable/rounded_button_background"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@id/manageHomesText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <!-- Tarjeta de acceso directo -->
+            <LinearLayout
+                android:id="@+id/shortcutCardLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/rounded_button_background"
+                android:padding="16dp"
+                app:layout_constraintTop_toBottomOf="@id/textViewDispositivosCompartidos"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/shortcutCardLabelText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Tarjeta de acceso directo"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"/>
+
+                <TextView
+                    android:id="@+id/shortcutCardStatusText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Desactivado"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textIdiomaRegin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Idioma y región"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@id/shortcutCardLayout"
+                app:layout_constraintStart_toStartOf="parent" />
+            <!-- Región -->
+            <LinearLayout
+                android:id="@+id/linearPais"
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/rounded_button_background"
+                android:padding="16dp"
+
+                android:layout_marginTop="8dp"
+
+
+                android:gravity="center_vertical"
+
+                app:layout_constraintTop_toBottomOf="@+id/textIdiomaRegin"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                >
+
+                <TextView
+                    android:id="@+id/regionText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Región"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"/>
+
+                <TextView
+                    android:id="@+id/regionValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Perú"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+
+            <!-- Idioma -->
+            <LinearLayout
+                android:id="@+id/linearIdioma"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/rounded_button_background"
+                android:padding="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/linearPais"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                >
+
+                <TextView
+                    android:id="@+id/idiomaText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Idioma"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"/>
+
+                <TextView
+                    android:id="@+id/idiomaValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Predeterminado"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+
+            <!-- Sección: Privacidad y Seguridad -->
+            <TextView
+                android:id="@+id/textPrivacySecurity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Privacidad y seguridad"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@+id/linearIdioma"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <!-- Administración de permisos -->
+            <LinearLayout
+                android:id="@+id/linearPermisosSistema"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/rounded_button_background"
+                android:padding="12dp"
+                app:layout_constraintTop_toBottomOf="@+id/textPrivacySecurity"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <TextView
+                    android:id="@+id/permissionsText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Administración de permisos del sistema"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+
+            <!-- Información legal -->
+            <LinearLayout
+                android:id="@+id/linearPrivacidaInformacionLegal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/rounded_button_background"
+                android:padding="12dp"
+                app:layout_constraintTop_toBottomOf="@+id/linearPermisosSistema"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <TextView
+                    android:id="@+id/legalInfoText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Información legal y Administración de privacidad"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+
+            <!-- Sección: Acerca de -->
+            <TextView
+                android:id="@+id/textAbout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Acerca de"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@+id/linearPrivacidaInformacionLegal"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <!-- Acerca de Mi Home -->
+            <LinearLayout
+                android:id="@+id/linearAcercaDOTSapp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/rounded_button_background"
+                android:padding="12dp"
+                app:layout_constraintTop_toBottomOf="@+id/textAbout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <TextView
+                    android:id="@+id/aboutMiHomeText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Acerca de DotpsApp"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+
+            <!-- Buscar actualizaciones -->
+            <LinearLayout
+                android:id="@+id/linearActualizaciones"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/rounded_button_background"
+                android:padding="12dp"
+                app:layout_constraintTop_toBottomOf="@+id/linearAcercaDOTSapp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <TextView
+                    android:id="@+id/checkUpdatesText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Buscar actualizaciones"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+
+            <!-- Botón Cerrar sesión -->
+            <LinearLayout
+                android:id="@+id/linearCerrarSesion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@drawable/rounded_button_background"
+                app:layout_constraintTop_toBottomOf="@+id/linearActualizaciones"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+            <Button
+                android:id="@+id/btnLogout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="12dp"
+
+                android:text="Cerrar sesión"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/colorGrisOscuro"
+
+                />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+<!--
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainSettingsLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PantUsuario.AjustesActivity"
+    android:padding="16dp"
+    android:background="@color/black"
+    >
+
+    <TextView
+        android:id="@+id/titleSettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ajustes adicionales"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/sectionGeneral"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="General"
+        android:textSize="14sp"
+        android:textColor="@color/colorGris"
+        app:layout_constraintTop_toBottomOf="@id/titleSettings"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/notificationSettingsText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Ajustes de notificación"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:padding="16dp"
+        android:background="@drawable/rounded_button_background"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/sectionGeneral"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/securitySettingsText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Ajustes de seguridad"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:padding="16dp"
+        android:background="@drawable/rounded_button_background"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/notificationSettingsText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/darkModeLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/rounded_button_background"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/securitySettingsText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:id="@+id/darkModeLabelText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Modo oscuro de los complementos"
+            android:textSize="16sp"
+            android:textColor="@color/white"/>
+
+        <Switch
+            android:id="@+id/darkModeSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/sectionDevices"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Configurar dispositivos"
+        android:textSize="14sp"
+        android:textColor="@color/colorGris"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/darkModeLayout"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/manageHomesText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Administrar dispositivos"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:padding="16dp"
+        android:background="@drawable/rounded_button_background"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/sectionDevices"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/shareDeviceText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Compartir dispositivo"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:padding="16dp"
+        android:background="@drawable/rounded_button_background"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/manageHomesText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/shortcutCardLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/rounded_button_background"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/shareDeviceText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:id="@+id/shortcutCardLabelText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Tarjeta de acceso directo"
+            android:textSize="16sp"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/shortcutCardStatusText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Desactivado"
+            android:textSize="16sp"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/hapticFeedbackLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/rounded_button_background"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/shortcutCardLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:id="@+id/hapticFeedbackLabelText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Tonos táctiles de los accesos directos"
+            android:textSize="16sp"
+            android:textColor="@color/white"/>
+
+        <Switch
+            android:id="@+id/FeedbackSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+-->

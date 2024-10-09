@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/black"
+    tools:context=".PantUsuario.Ajustes.AjustesAcercaDotsAppActivity">
+
+        <!-- Título Principal -->
+        <TextView
+            android:id="@+id/titleAbout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Acerca de Mi Home"
+            android:textSize="24sp"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="24dp"/>
+
+        <!-- Ícono Central -->
+        <ImageView
+            android:id="@+id/iconApp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/batch_path1_dotslogo"
+        app:layout_constraintTop_toBottomOf="@id/titleAbout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="48dp"/>
+
+        <!-- Versión Actual -->
+        <TextView
+            android:id="@+id/versionText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Versión actual: 9.9.700.8438-GooglePlay"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/iconApp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Derechos de Autor -->
+        <TextView
+            android:id="@+id/copyrightText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Copyright © 2014 - 2024 Xiaomi All Rights Reserved"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="16dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
