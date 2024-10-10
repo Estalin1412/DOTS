@@ -9,7 +9,7 @@
     <!-- Definir un borde alrededor del botón (opcional) -->
     <stroke
         android:width="2dp"
-        android:color="@color/colorGris" />
+        android:color="@color/colorGrisOscuro" />
 
     <!-- Añadir padding interno (opcional) -->
     <padding

@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:padding="16dp"
     android:background="@color/black"
-    tools:context=".PantNanoLab.addDiviceNanoLabMainActivity">
+    tools:context=".PantNanoLab.NanoLabMainAddDiviceActivity">
         <!-- Header Título -->
         <TextView
             android:id="@+id/titleAddDevice"

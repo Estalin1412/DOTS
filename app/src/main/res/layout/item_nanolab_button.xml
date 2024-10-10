@@ -16,7 +16,7 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_gravity="center"
-        android:src="@drawable/batch_path1_tasks"
+        android:src="@drawable/logoplaca"
         android:contentDescription="Icono" />
 
     <TextView

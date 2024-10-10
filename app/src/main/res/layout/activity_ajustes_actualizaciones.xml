@@ -16,9 +16,12 @@
             android:text="Buscar actualizaciones"
             android:textSize="24sp"
             android:textColor="@color/white"
+
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+
+
             android:layout_marginTop="24dp"/>
 
         <!-- Actualizaciones automáticas de firmware -->
@@ -32,6 +35,8 @@
             app:layout_constraintTop_toBottomOf="@id/titleCheckUpdates"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
             android:layout_marginTop="16dp">
 
             <TextView
@@ -60,10 +65,14 @@
             android:text="Los dispositivos compatibles con esta función intentarán actualizar el firmware automáticamente entre las 2:00 y las 6:00 de la mañana sin ninguna notificación de audio o de luz. Algunos dispositivos, como las cámaras, se pondrán en pausa durante la actualización del firmware y reanudarán el funcionamiento cuando termine."
             android:textSize="14sp"
             android:textColor="@color/colorGris"
-            android:layout_marginTop="16dp"
+
             app:layout_constraintTop_toBottomOf="@id/firmwareUpdateLayout"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintEnd_toEndOf="parent"
+
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"/>
 
         <!-- Ícono de verificación -->
         <ImageView

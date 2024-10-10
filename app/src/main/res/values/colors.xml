@@ -15,8 +15,9 @@
     <color name="colorBlack">#000000</color>
     <color name="colorMarineBlue">#04142E</color>
     <color name="colorVerde">#05560A</color>
+    <color name="logo_flecha_derecha">#FAF6F6</color>
     <color name="logosPantallaInicio">#6E8BA0</color>
-    <color name="colorGrisOscuro">#2A2929</color>
+    <color name="colorGrisOscuro">#1E1E1F</color>
     <color name="colorUsuarioWhite">#C0C5E9</color>
 
     <!-- Configuracion de colores para activity_config_usuario-->

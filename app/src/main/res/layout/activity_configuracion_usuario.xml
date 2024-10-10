@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".PantUsuario.ConfiguracionUsuarioActivity">
+    <!-- Título -->
+
+    <!-- Título Principal -->
+    <TextView
+        android:id="@+id/titlePersonalInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Informacion Personal"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"/>
+
+    <!-- Botón de Ayuda -->
+    <TextView
+        android:id="@+id/helpText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Help"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+
+        app:layout_constraintTop_toTopOf="@id/titlePersonalInfo"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="16dp" />
+
+    <!-- Foto de perfil -->
+    <LinearLayout
+        android:id="@+id/linearCambiarFoto"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/titlePersonalInfo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp">
+
+        <TextView
+            android:id="@+id/tvPhotoDePerfil"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="15dp"
+            android:text="Foto de perfil"
+            android:textSize="16sp"
+            android:textColor="@color/white" />
+
+        <ImageView
+            android:id="@+id/profilePhoto"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/batch_path1_usuario"
+            android:textSize="16sp"
+            android:textColor="@color/config_usuarioAzul" />
+    </LinearLayout>
+
+    <!-- Información Básica -->
+    <TextView
+        android:id="@+id/basicInfoLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Informacion Basica"
+        android:textSize="16sp"
+        android:textColor="@color/colorGris"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/linearCambiarFoto"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"/>
+
+    <!-- Nickname -->
+    <LinearLayout
+        android:id="@+id/nicknameLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/basicInfoLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp">
+
+        <TextView
+            android:id="@+id/nicknameLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Nombre de Usuario"
+            android:textSize="16sp"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/setNickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Set nickname"
+            android:textSize="16sp"
+            android:textColor="@color/Amarillo" />
+    </LinearLayout>
+
+    <!-- Gender -->
+    <LinearLayout
+        android:id="@+id/genderLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/nicknameLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp">
+
+        <TextView
+            android:id="@+id/genderLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Sexo"
+            android:textSize="16sp"
+            android:textColor="@color/white" />
+
+        <ImageView
+            android:id="@+id/genderArrow"
+            android:layout_width="22sp"
+            android:layout_height="22sp"
+            android:src="@drawable/batch_path1_ajustes"
+            android:contentDescription="Gender Arrow" />
+    </LinearLayout>
+
+    <!-- Xiaomi Account ID -->
+    <LinearLayout
+        android:id="@+id/accountIdLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/genderLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp">
+
+        <TextView
+            android:id="@+id/accountIdLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Codigo de Usuario"
+            android:textSize="16sp"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/accountIdValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6754921180"
+            android:textSize="16sp"
+            android:textColor="@color/Amarillo" />
+    </LinearLayout>
+
+    <!-- Region -->
+    <LinearLayout
+        android:id="@+id/regionLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/accountIdLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp">
+
+        <TextView
+            android:id="@+id/regionLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Region"
+            android:textSize="16sp"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/regionValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Peru"
+            android:textSize="16sp"
+            android:textColor="@color/Amarillo" />
+    </LinearLayout>
+
+    <!-- Botón de Cerrar Sesión -->
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

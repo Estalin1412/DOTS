@@ -28,7 +28,10 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             app:layout_constraintTop_toBottomOf="@id/titleSharedDevices"
-            app:layout_constraintStart_toStartOf="parent">
+            app:layout_constraintStart_toStartOf="parent"
+
+            android:layout_marginStart="16dp"
+            >
 
             <Button
                 android:id="@+id/buttonCompartir"

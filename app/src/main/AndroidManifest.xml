@@ -18,17 +18,25 @@
         android:theme="@style/Theme.DOTS"
         tools:targetApi="31">
         <activity
+            android:name=".PantUsuario.ConfiguracionUsuarioActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
             android:name=".PantUsuario.Ajustes.AjustesActualizacionesActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".PantUsuario.Ajustes.AjustesAcercaDotsAppActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".PantUsuario.Ajustes.AjustesPrivacidadInfoLegalActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".PantUsuario.Ajustes.AjustesCompartirDispositivoActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".PantUsuario.Ajustes.AjustesSeguridadActivity"
             android:exported="false"
@@ -54,7 +62,7 @@
             android:exported="false"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
-            android:name=".PantNanoLab.addDiviceNanoLabMainActivity"
+            android:name=".PantNanoLab.NanoLabMainAddDiviceActivity"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
@@ -62,11 +70,11 @@
             android:exported="false"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
-            android:name=".PantUsuario.ayudaPrincipalActivity"
+            android:name=".PantUsuario.AyudaActivity"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
-            android:name=".PantPrincipal.ConfigurationUsuarioActivity"
+            android:name=".PantPrincipal.ConfigurationCuentaActivity"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity

@@ -18,6 +18,7 @@
         android:orientation="horizontal"
         android:gravity="center_vertical"
         android:layout_marginBottom="8dp"
+        android:layout_marginTop="32dp"
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -36,9 +37,9 @@
         <!-- Flecha clickeable que redirige a otra pantalla -->
         <ImageView
             android:id="@+id/arrowIcon"
-            android:layout_width="22dp"
-            android:layout_height="22dp"
-            android:src="@drawable/botonsiguientederecha"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/flecha_derecha"
 
             android:layout_marginStart="8dp"
             android:scaleType="fitXY"
@@ -75,6 +76,8 @@
         android:layout_below="@id/headerLayout"
         android:clickable="true"
         android:focusable="true"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
     <androidx.cardview.widget.CardView
@@ -151,7 +154,7 @@
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/batch_path1_usuario"
+                android:src="@drawable/logo_email"
                 android:scaleType="fitXY"
                 android:tint="@color/config_usuarioAzul"
                 android:contentDescription="iconoDeImagen" />
@@ -215,7 +218,8 @@
                 android:id="@+id/homeIcon"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:src="@drawable/batch_path1_ajustes"
+                android:src="@drawable/batch_path1_dotslogo"
+                android:tint="@color/logosPantallaInicio"
                 android:contentDescription="Icono de hogar" />
 
             <TextView
@@ -230,7 +234,7 @@
 
         <!-- Segundo botón: Asistente de voz -->
         <LinearLayout
-            android:id="@+id/voiceAssistantButton"
+            android:id="@+id/linearConfigUsuario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -245,7 +249,7 @@
                 android:id="@+id/voiceAssistantIcon"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:src="@drawable/batch_path1_ajustes"
+                android:src="@drawable/batch_path1_usuario"
                 android:contentDescription="Icono de asistente de voz" />
 
             <TextView
@@ -275,7 +279,6 @@
                 android:id="@+id/stationsIcon"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:tint="@color/colorGris"
                 android:src="@drawable/batch_path1_ajustes"
                 android:contentDescription="Icono de estaciones" />
 
@@ -306,7 +309,7 @@
                 android:id="@+id/settingsIcon"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:src="@drawable/batch_path1_ajustes"
+                android:src="@drawable/logodialogo"
                 android:contentDescription="Icono de ajustes adicionales" />
 
             <TextView
@@ -378,7 +381,7 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="8dp"
-                android:src="@drawable/batch_path1_ajustes"
+                android:src="@drawable/logoplaca"
                 android:scaleType="fitXY"
                 android:contentDescription="Inteligente"
                 android:background="?attr/selectableItemBackgroundBorderless"/>
@@ -408,6 +411,7 @@
                 android:src="@drawable/batch_path1_usuario"
                 android:scaleType="fitXY"
                 android:contentDescription="Perfil"
+                android:tint="@color/white"
                 android:background="?attr/selectableItemBackgroundBorderless"/>
 
             <TextView

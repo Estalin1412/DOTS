@@ -3,14 +3,12 @@ package com.example.dots.PantPrincipal
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import android.widget.ImageButton
 import android.widget.LinearLayout
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.example.dots.PantUsuario.AjustesActivity
-import com.example.dots.PantUsuario.ayudaPrincipalActivity
+import com.example.dots.PantUsuario.AyudaActivity
+import com.example.dots.PantUsuario.ConfiguracionUsuarioActivity
 import com.example.dots.R
 
 class usuarioActivity : AppCompatActivity() {
@@ -18,7 +16,8 @@ class usuarioActivity : AppCompatActivity() {
     lateinit var btnAyuda: LinearLayout
     lateinit var btnDots: LinearLayout
     lateinit var btnAjustes: LinearLayout
-    lateinit var imbtnOpcionUsuario: LinearLayout
+    lateinit var btnConfiguracionUsuario: LinearLayout
+    lateinit var btnConfiguracionCuenta: LinearLayout
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -44,23 +43,28 @@ class usuarioActivity : AppCompatActivity() {
         btnAyuda = findViewById(R.id.linearButtomAyudaRecomendaciones)
         btnDots = findViewById(R.id.linearIdInicio)
         btnAjustes = findViewById(R.id.linearAjustes)
-        imbtnOpcionUsuario = findViewById(R.id.linearConfigCuenta)
+        btnConfiguracionUsuario = findViewById(R.id.linearConfigUsuario)
+        btnConfiguracionCuenta = findViewById(R.id.linearConfigCuenta)
     }
     fun InitListenersComponents(){
         btnAyuda.setOnClickListener{
-            intent = Intent(this, ayudaPrincipalActivity::class.java)
+            intent = Intent(this, AyudaActivity::class.java)
             startActivity(intent)
         }
         btnDots.setOnClickListener{
             intent = Intent(this, PantallaInicio::class.java)
             startActivity(intent)
         }
+        btnConfiguracionUsuario.setOnClickListener{
+            intent = Intent(this, ConfiguracionUsuarioActivity::class.java)
+            startActivity(intent)
+        }
         btnAjustes.setOnClickListener{
             intent = Intent(this, AjustesActivity::class.java)
             startActivity(intent)
         }
-        imbtnOpcionUsuario.setOnClickListener{
-            val intent = Intent(this , ConfigurationUsuarioActivity::class.java)
+        btnConfiguracionCuenta.setOnClickListener{
+            val intent = Intent(this , ConfigurationCuentaActivity::class.java)
             startActivity(intent)
         }
 

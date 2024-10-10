@@ -2,19 +2,13 @@ package com.example.dots.PantPrincipal
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.Menu
 import android.view.MenuItem
 import android.view.View
-import android.view.ViewGroup
-import android.widget.Button
 import android.widget.ImageButton
 import android.widget.LinearLayout
 import android.widget.PopupMenu
-import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.example.dots.PantNanoLab.NanoLabMainActivity
 import com.example.dots.R
 
@@ -62,7 +56,7 @@ class PantallaInicio : AppCompatActivity() {
         //Para mostrar opciones flotantes
         imbtnOpcionesDispositivo.setOnClickListener{view -> showPopupMenu(view)}
         imbtnOpcionUsuario.setOnClickListener{
-            val intent = Intent(this , ConfigurationUsuarioActivity::class.java)
+            val intent = Intent(this , ConfigurationCuentaActivity::class.java)
             startActivity(intent)
         }
 

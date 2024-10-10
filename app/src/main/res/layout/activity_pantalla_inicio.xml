@@ -18,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="32dp"
         >
 
         <TextView
@@ -166,6 +166,7 @@
                 android:src="@drawable/logocasa"
                 android:scaleType="fitXY"
                 android:contentDescription="Mi Home"
+                android:tint="@color/white"
                 android:background="?attr/selectableItemBackgroundBorderless"/>
 
             <TextView
@@ -190,7 +191,7 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="8dp"
-                android:src="@drawable/batch_path1_ajustes"
+                android:src="@drawable/logoplaca"
                 android:scaleType="fitXY"
                 android:contentDescription="Inteligente"
                 android:background="?attr/selectableItemBackgroundBorderless"/>
