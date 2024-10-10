@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PantUsuario.ConfiguracionCuenta.ConfiguracionCuentaAutentificacionActivity"
+    android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="32dp">
+
+            <!-- Título de la pantalla -->
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Verificar identidad"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp" />
+
+
+            <!-- EditText para el correo electrónico -->
+            <EditText
+                android:id="@+id/editTextEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Introduce tu correo electrónico"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/black"
+                android:textColorHint="@color/colorMarineBlue"
+                android:background="@drawable/edit_text_background"
+                android:padding="12dp"
+                android:textSize="16sp" />
+            <Button
+                android:id="@+id/buttonNEnviarCodigo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enviar código de autentificación"
+                android:backgroundTint="@color/colorMarineBlue"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Podra volver a enviar otro codigo despues de 60 segundos."
+                android:textColor="@color/black"
+                />
+            <!-- EditText para el código de verificación -->
+            <EditText
+                android:id="@+id/editTextVerificationCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Introduce el código de verificación"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textColorHint="@color/colorMarineBlue"
+                android:background="@drawable/edit_text_background"
+                android:padding="12dp"
+                android:textSize="16sp"
+                android:layout_marginTop="32dp" />
+
+            <!-- Botón para continuar -->
+            <Button
+                android:id="@+id/buttonCambiarPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Siguiente"
+                android:backgroundTint="@color/colorMarineBlue"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp"/>
+
+        </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

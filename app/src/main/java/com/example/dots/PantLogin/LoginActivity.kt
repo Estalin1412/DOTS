@@ -8,7 +8,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.dots.PantPrincipal.PantallaInicio
+import com.example.dots.PantPrincipal.PantallaInicioActivity
 import com.example.dots.R
 
 class LoginActivity : AppCompatActivity() {
@@ -44,7 +44,7 @@ class LoginActivity : AppCompatActivity() {
     public fun InitListeners(){
         //Configurar boton para iniciar sesion
         btnAccederSession.setOnClickListener{
-            val intent = Intent(this , PantallaInicio::class.java)
+            val intent = Intent(this , PantallaInicioActivity::class.java)
             startActivity(intent)
         }
         //Boton para redirigirte a la pantalla de Crear Cuenta(PantallaRegistrarActivity)
@@ -54,7 +54,7 @@ class LoginActivity : AppCompatActivity() {
         }
         //Boton para recuperar contraseña
         tvForgotPassword.setOnClickListener{
-            val intent = Intent(this, ForgotPasswordActivity::class.java)
+            val intent = Intent(this, PantallaOlvidePasswordActivity::class.java)
             startActivity(intent)
         }
     }

@@ -18,6 +18,15 @@
         android:theme="@style/Theme.DOTS"
         tools:targetApi="31">
         <activity
+            android:name=".PantUsuario.ConfiguracionCuenta.ConfiguracionCuentaAutentificacionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PantUsuario.ConfiguracionCuenta.ConfiguracionCuentaCambiarPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PantUsuario.ConfiguracionCuenta.ConfiguracionCuentaInsertarFotoActivity"
+            android:exported="false" />
+        <activity
             android:name=".PantUsuario.ConfiguracionUsuarioActivity"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
@@ -74,11 +83,11 @@
             android:exported="false"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
-            android:name=".PantPrincipal.ConfigurationCuentaActivity"
+            android:name=".PantUsuario.ConfiguracionCuentaActivity"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
-            android:name=".PantNanoLab.DataNanoLabActivity"
+            android:name=".PantNanoLab.NanoLabMainDataLabActivity"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
@@ -86,14 +95,14 @@
             android:exported="false"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
-            android:name=".PantPrincipal.usuarioActivity"
+            android:name=".PantPrincipal.PantallaUsuarioActivity"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".PantLogin.PantallaRegistrarActivity"
             android:exported="false" />
         <activity
-            android:name=".PantLogin.ForgotPasswordActivity"
+            android:name=".PantLogin.PantallaOlvidePasswordActivity"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
@@ -106,7 +115,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".PantPrincipal.PantallaInicio"
+            android:name=".PantPrincipal.PantallaInicioActivity"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
     </application>

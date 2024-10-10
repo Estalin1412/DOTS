@@ -7,7 +7,7 @@
     android:padding="16dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PantNanoLab.DataNanoLabActivity">
+    tools:context=".PantNanoLab.NanoLabMainDataLabActivity">
 
         <!-- Sección superior para gráficos o detalles -->
         <FrameLayout

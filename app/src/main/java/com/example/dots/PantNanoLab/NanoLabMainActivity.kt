@@ -46,8 +46,8 @@ class NanoLabMainActivity : AppCompatActivity() {
         buttonsAdapter = ButtonAdapter(buttonList) { buttonData ->
             when (buttonData.text) {
                 "Nano 1" -> {
-                    // Abrir DataNanoLabActivity cuando se hace clic en "Nano 1"
-                    val intent = Intent(this, DataNanoLabActivity::class.java)
+                    // Abrir NanoLabMainDataLabActivity cuando se hace clic en "Nano 1"
+                    val intent = Intent(this, NanoLabMainDataLabActivity::class.java)
                     startActivity(intent)
                 }
                 "Nano 2" -> {

@@ -16,7 +16,7 @@ import java.io.BufferedReader
 import java.io.InputStreamReader
 
 
-class DataNanoLabActivity : AppCompatActivity() {
+class NanoLabMainDataLabActivity : AppCompatActivity() {
     /*DEFINICION DE OBJETOS VISUALES------------------------------------------------*/
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: DatosNanolabAdapter
@@ -26,7 +26,7 @@ class DataNanoLabActivity : AppCompatActivity() {
         override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_data_nano_lab)
+        setContentView(R.layout.activity_nano_lab_main_data)
 
 
             val listaDatos = listOf(

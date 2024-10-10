@@ -9,9 +9,10 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.dots.PantUsuario.AjustesActivity
 import com.example.dots.PantUsuario.AyudaActivity
 import com.example.dots.PantUsuario.ConfiguracionUsuarioActivity
+import com.example.dots.PantUsuario.ConfiguracionCuentaActivity
 import com.example.dots.R
 
-class usuarioActivity : AppCompatActivity() {
+class PantallaUsuarioActivity : AppCompatActivity() {
 
     lateinit var btnAyuda: LinearLayout
     lateinit var btnDots: LinearLayout
@@ -23,7 +24,7 @@ class usuarioActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_usuario)
+        setContentView(R.layout.activity_pantalla_usuario)
         window.decorView.systemUiVisibility = (
                 View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
                         or View.SYSTEM_UI_FLAG_FULLSCREEN
@@ -52,7 +53,7 @@ class usuarioActivity : AppCompatActivity() {
             startActivity(intent)
         }
         btnDots.setOnClickListener{
-            intent = Intent(this, PantallaInicio::class.java)
+            intent = Intent(this, PantallaInicioActivity::class.java)
             startActivity(intent)
         }
         btnConfiguracionUsuario.setOnClickListener{
@@ -64,7 +65,7 @@ class usuarioActivity : AppCompatActivity() {
             startActivity(intent)
         }
         btnConfiguracionCuenta.setOnClickListener{
-            val intent = Intent(this , ConfigurationCuentaActivity::class.java)
+            val intent = Intent(this , ConfiguracionCuentaActivity::class.java)
             startActivity(intent)
         }
 

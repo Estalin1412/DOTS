@@ -10,9 +10,10 @@ import android.widget.PopupMenu
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import com.example.dots.PantNanoLab.NanoLabMainActivity
+import com.example.dots.PantUsuario.ConfiguracionCuentaActivity
 import com.example.dots.R
 
-class PantallaInicio : AppCompatActivity() {
+class PantallaInicioActivity : AppCompatActivity() {
     /*-------------------------Definicion de objetos visuales---------------------*/
     //Definicion de variable para botones en de activity_pantalla_inicio.xml
     lateinit var imbtnOpcionUsuario: ImageButton
@@ -56,12 +57,12 @@ class PantallaInicio : AppCompatActivity() {
         //Para mostrar opciones flotantes
         imbtnOpcionesDispositivo.setOnClickListener{view -> showPopupMenu(view)}
         imbtnOpcionUsuario.setOnClickListener{
-            val intent = Intent(this , ConfigurationCuentaActivity::class.java)
+            val intent = Intent(this , ConfiguracionCuentaActivity::class.java)
             startActivity(intent)
         }
 
         btnCuenta.setOnClickListener{
-            val intent = Intent(this, usuarioActivity::class.java)
+            val intent = Intent(this, PantallaUsuarioActivity::class.java)
             startActivity(intent)
         }
 

@@ -66,6 +66,7 @@
                 android:background="@drawable/rounded_button_background"
 
                 android:layout_marginTop="8dp"
+                android:drawableEnd="@drawable/logo_derecha_normal"
 
                 app:layout_constraintTop_toBottomOf="@id/sectionGeneral"
                 app:layout_constraintStart_toStartOf="parent"
@@ -81,6 +82,8 @@
                 android:textSize="16sp"
                 android:textColor="@color/white"
                 android:padding="16dp"
+                android:drawableEnd="@drawable/logo_derecha_normal"
+
 
                 android:background="@drawable/rounded_button_background"
                 android:layout_marginTop="8dp"
@@ -172,6 +175,8 @@
                 android:textSize="16sp"
                 android:textColor="@color/white"
                 android:padding="16dp"
+                android:drawableEnd="@drawable/logo_derecha_normal"
+
                 android:background="@drawable/rounded_button_background"
                 android:layout_marginTop="8dp"
                 app:layout_constraintTop_toBottomOf="@id/sectionDevices"
@@ -179,21 +184,25 @@
                 app:layout_constraintEnd_toEndOf="parent"/>
 
             <!-- Compartir dispositivo -->
+
+            <!-- Tarjeta de acceso directo -->
             <TextView
                 android:id="@+id/textViewDispositivosCompartidos"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Compartir dispositivo"
-                android:textSize="16sp"
-                android:textColor="@color/white"
-                android:padding="16dp"
-                android:background="@drawable/rounded_button_background"
                 android:layout_marginTop="8dp"
-                app:layout_constraintTop_toBottomOf="@id/manageHomesText"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"/>
+                android:background="@drawable/rounded_button_background"
+                android:drawableEnd="@drawable/logo_derecha_normal"
+                android:padding="16dp"
+                android:text="Compartir dispositivo"
 
-            <!-- Tarjeta de acceso directo -->
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/manageHomesText" />
+
             <LinearLayout
                 android:id="@+id/shortcutCardLayout"
                 android:layout_width="0dp"
@@ -201,6 +210,7 @@
                 android:orientation="horizontal"
                 android:background="@drawable/rounded_button_background"
                 android:padding="16dp"
+                android:drawableEnd="@drawable/logo_derecha_normal"
                 app:layout_constraintTop_toBottomOf="@id/textViewDispositivosCompartidos"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -316,6 +326,8 @@
                 android:text="Privacidad y seguridad"
                 android:textColor="@color/white"
                 android:textSize="14sp"
+                android:drawableEnd="@drawable/logo_derecha_normal"
+
                 app:layout_constraintTop_toBottomOf="@+id/linearIdioma"
                 app:layout_constraintStart_toStartOf="parent"/>
 
@@ -340,6 +352,8 @@
                     android:layout_weight="1"
                     android:text="Administración de permisos del sistema"
                     android:textSize="16sp"
+                    android:drawableEnd="@drawable/logo_derecha_normal"
+
                     android:textColor="@color/white"/>
             </LinearLayout>
 
@@ -364,6 +378,8 @@
                     android:layout_weight="1"
                     android:text="Información legal y Administración de privacidad"
                     android:textSize="16sp"
+                    android:drawableEnd="@drawable/logo_derecha_normal"
+
                     android:textColor="@color/white"/>
             </LinearLayout>
 
@@ -400,6 +416,8 @@
                     android:layout_weight="1"
                     android:text="Acerca de DotpsApp"
                     android:textSize="16sp"
+                    android:drawableEnd="@drawable/logo_derecha_normal"
+
                     android:textColor="@color/white"/>
             </LinearLayout>
 
@@ -422,6 +440,8 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:drawableEnd="@drawable/logo_derecha_normal"
+
                     android:text="Buscar actualizaciones"
                     android:textSize="16sp"
                     android:textColor="@color/white"/>
@@ -445,7 +465,6 @@
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
-                android:padding="12dp"
 
                 android:text="Cerrar sesión"
                 android:textColor="@color/white"
