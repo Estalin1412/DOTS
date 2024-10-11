@@ -22,7 +22,7 @@ class ConfiguracionCuentaAutentificacionActivity : AppCompatActivity() {
         ListenerComponents()
     }
     fun InitComponents(){
-        btnCambiarPasword = findViewById(R.id.cardViewCambiarPassword)
+        btnCambiarPasword = findViewById(R.id.buttonCambiarPassword)
     }
     fun ListenerComponents(){
         btnCambiarPasword.setOnClickListener{

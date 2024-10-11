@@ -20,7 +20,6 @@ class ConfiguracionUsuarioActivity : AppCompatActivity() {
         setContentView(R.layout.activity_configuracion_usuario)
         InitComponents()
         ListenerComponenst()
-
     }
 
     fun InitComponents(){
@@ -28,7 +27,9 @@ class ConfiguracionUsuarioActivity : AppCompatActivity() {
     }
 
     fun ListenerComponenst(){
-        val intent = Intent(this, ConfiguracionCuentaInsertarFotoActivity::class.java)
-        startActivity(intent)
+        btnCambiarFotoDePerfil.setOnClickListener{
+            val intent = Intent(this, ConfiguracionCuentaInsertarFotoActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

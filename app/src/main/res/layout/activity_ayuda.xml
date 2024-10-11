@@ -6,6 +6,208 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".PantUsuario.AyudaActivity"
-    android:padding="16dp"
     android:background="@color/black">
+        <!-- Sección "Mis dispositivos" -->
+        <TextView
+            android:id="@+id/tvMisDispositivos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ayuda y Recomendaciones de Uso"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <!-- Sección "Más" -->
+        <TextView
+            android:id="@+id/tvMas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sobre la aplicacion"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/tvMisDispositivos"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- Iconos de opciones en la sección "Más" -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/gridOpciones"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:columnCount="3"
+            android:rowCount="2"
+            android:alignmentMode="alignMargins"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintTop_toBottomOf="@id/tvMas"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <!-- Aplicación Mi Home -->
+            <LinearLayout
+                android:id="@+id/linearDotsApp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                android:gravity="center"
+                android:layout_marginStart="32dp">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/batch_path1_dotslogo"
+                    android:contentDescription="Aplicación Mi Home" />
+
+                <TextView
+                    android:layout_width="64dp"
+                    android:layout_height="wrap_content"
+                    android:text="DOTSapp"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <!-- Hogar inteligente -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/linearDotsApp"
+                app:layout_constraintEnd_toStartOf="@+id/linearCompartirDispositivos"
+                >
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/logoplaca"
+                    android:contentDescription="Hogar inteligente" />
+
+                <TextView
+                    android:layout_width="96dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Nanolab"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <!-- Inteligente -->
+            <LinearLayout
+                android:id="@+id/linearCompartirDispositivos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginEnd="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/logocasa"
+                    android:contentDescription="Inteligente" />
+
+                <TextView
+                    android:layout_width="64dp"
+                    android:layout_height="wrap_content"
+                    android:text="Hiperlink"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <!-- Puerta de enlace Bluetooth -->
+            <LinearLayout
+                android:id="@+id/linearConexiones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="32dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearDotsApp">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/logocasa"
+                    android:contentDescription="Puerta de enlace Bluetooth" />
+
+                <TextView
+                    android:layout_width="64dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Compartir dispositivos"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <!-- Consultas y recomendaciones -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                app:layout_constraintStart_toEndOf="@+id/linearConexiones"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/linearOtros">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/logocasa"
+                    android:contentDescription="Recomendaciones generales" />
+
+                <TextView
+                    android:layout_width="96dp"
+                    android:layout_height="wrap_content"
+                    android:text="Conexiones de dispositivos"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <!-- Otros -->
+            <LinearLayout
+                android:id="@+id/linearOtros"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearCompartirDispositivos"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                >
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/logocasa"
+                    android:contentDescription="Otros" />
+
+                <TextView
+                    android:layout_width="64dp"
+                    android:layout_height="wrap_content"
+                    android:text="Otros"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -97,17 +97,18 @@
        app:cardCornerRadius="16dp"
        android:layout_marginStart="16dp"
        android:layout_marginEnd="8dp"
-       android:clickable="true"
        app:layout_constraintStart_toStartOf="parent"
        app:layout_constraintEnd_toStartOf="@+id/cvEmail"
        app:layout_constraintTop_toBottomOf="@+id/tvObtenerInformacion"
        android:layout_marginTop="16dp">
 
       <LinearLayout
+          android:id="@+id/linearCambiarContraseña"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:gravity="center_vertical"
           android:orientation="vertical"
+          android:clickable="true"
           android:padding="12dp">
 
          <ImageView
@@ -225,6 +226,7 @@
        android:padding="16dp"
        android:layout_marginStart="16dp"
        android:layout_marginEnd="16dp"
+       android:clickable="true"
        app:layout_constraintTop_toBottomOf="@+id/manageDevicesLayout"
        app:layout_constraintStart_toStartOf="parent"
        app:layout_constraintEnd_toEndOf="parent"

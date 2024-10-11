@@ -14,11 +14,17 @@ import com.example.dots.R
 
 class PantallaUsuarioActivity : AppCompatActivity() {
 
-    lateinit var btnAyuda: LinearLayout
+
     lateinit var btnDots: LinearLayout
-    lateinit var btnAjustes: LinearLayout
-    lateinit var btnConfiguracionUsuario: LinearLayout
+
+
     lateinit var btnConfiguracionCuenta: LinearLayout
+
+    lateinit var btnConfiguracionUsuario: LinearLayout
+
+    lateinit var btnAjustes: LinearLayout
+
+    lateinit var btnAyuda: LinearLayout
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -45,13 +51,10 @@ class PantallaUsuarioActivity : AppCompatActivity() {
         btnDots = findViewById(R.id.linearIdInicio)
         btnAjustes = findViewById(R.id.linearAjustes)
         btnConfiguracionUsuario = findViewById(R.id.linearConfigUsuario)
-        btnConfiguracionCuenta = findViewById(R.id.linearConfigCuenta)
+        btnConfiguracionCuenta = findViewById(R.id.linearConfiguracionCuenta)
     }
     fun InitListenersComponents(){
-        btnAyuda.setOnClickListener{
-            intent = Intent(this, AyudaActivity::class.java)
-            startActivity(intent)
-        }
+
         btnDots.setOnClickListener{
             intent = Intent(this, PantallaInicioActivity::class.java)
             startActivity(intent)
@@ -60,12 +63,18 @@ class PantallaUsuarioActivity : AppCompatActivity() {
             intent = Intent(this, ConfiguracionUsuarioActivity::class.java)
             startActivity(intent)
         }
+
+        btnConfiguracionCuenta.setOnClickListener{
+            val intent = Intent(this , ConfiguracionCuentaActivity::class.java)
+            startActivity(intent)
+        }
+
         btnAjustes.setOnClickListener{
             intent = Intent(this, AjustesActivity::class.java)
             startActivity(intent)
         }
-        btnConfiguracionCuenta.setOnClickListener{
-            val intent = Intent(this , ConfiguracionCuentaActivity::class.java)
+        btnAyuda.setOnClickListener{
+            intent = Intent(this, AyudaActivity::class.java)
             startActivity(intent)
         }
 

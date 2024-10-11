@@ -18,14 +18,25 @@
         android:theme="@style/Theme.DOTS"
         tools:targetApi="31">
         <activity
+            android:name=".PantUsuario.Ajustes.ajusNotificaciones.AjustesNotificacionesNoMolestarActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".PantUsuario.Ajustes.ajusNotificaciones.AjustesNotificacionesSistema"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
             android:name=".PantUsuario.ConfiguracionCuenta.ConfiguracionCuentaAutentificacionActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".PantUsuario.ConfiguracionCuenta.ConfiguracionCuentaCambiarPasswordActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".PantUsuario.ConfiguracionCuenta.ConfiguracionCuentaInsertarFotoActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".PantUsuario.ConfiguracionUsuarioActivity"
             android:exported="false"

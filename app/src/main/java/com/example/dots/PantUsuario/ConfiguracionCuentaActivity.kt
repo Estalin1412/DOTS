@@ -16,9 +16,9 @@ import com.example.dots.R
 
 class ConfiguracionCuentaActivity : AppCompatActivity() {
 
-    lateinit var btnInsertarFotoPerfel: LinearLayout
-    lateinit var btnCambiarPassword: CardView
-    lateinit var btnAjustesDispositivosCompartidos: TextView
+    lateinit var btnInsertarFotoPerfil: LinearLayout
+    lateinit var btnCambiarPassword: LinearLayout
+    lateinit var btnAjustesDispositivosCompartidos: LinearLayout
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -30,20 +30,26 @@ class ConfiguracionCuentaActivity : AppCompatActivity() {
 
 
     fun InitComponents(){
-        btnInsertarFotoPerfel = findViewById(R.id.linearInsertarFotoPerfil)
-        btnCambiarPassword = findViewById(R.id.cardViewCambiarPassword)
+
+        btnInsertarFotoPerfil = findViewById(R.id.linearInsertarFotoPerfil)
+
+        btnCambiarPassword = findViewById(R.id.linearCambiarContraseña)
+
         btnAjustesDispositivosCompartidos = findViewById(R.id.linearDispositivosCompartidos)
 
     }
     fun ListenerComponents(){
-        btnInsertarFotoPerfel.setOnClickListener{
+
+        btnInsertarFotoPerfil.setOnClickListener{
             val intent = Intent(this, ConfiguracionCuentaInsertarFotoActivity::class.java)
             startActivity(intent)
         }
+
         btnCambiarPassword.setOnClickListener{
             val intent = Intent(this, ConfiguracionCuentaAutentificacionActivity::class.java)
             startActivity(intent)
         }
+
         btnAjustesDispositivosCompartidos.setOnClickListener{
             val intent = Intent(this, AjustesCompartirDispositivoActivity::class.java)
             startActivity(intent)
